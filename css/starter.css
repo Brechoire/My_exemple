@@ -1,0 +1,47 @@
+body {
+    padding-top: 5rem;
+    font-family: Verdana;
+    font-size: 1.6em;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+}
+
+.navbar-inverse {
+    background-color: #2890d5;
+    padding: 1rem;
+    border: 1px solid #2890d9;
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand {
+    color: rgb(110, 255, 0);
+}
+
+.border-sep{
+    border: 1px solid darkgrey;
+    border-radius: 2px;
+    box-shadow: #2890d5;
+}
+
+.info{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    padding: 5px;
+    margin: 0 -15px 0 -15px;
+
+}
+
+p{
+    padding: 2px;
+}
+
+pre > code{
+    font-size: 1.4em;
+}
