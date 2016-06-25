@@ -65,6 +65,12 @@
 
     <div class="col-md-12 border-sep" id="exemple2">
         <h2>Exemple de selection n°2</h2>
+        <p>E1 : Selectionne tout les <code>ul</code> en rouge<br>
+            E2 : Selectionne tout les <code>ol</code> en bleu<br>
+            E3 : Selectionne tout les <code>ul</code> de <code>class bleu</code> en orange</p>
+        <button id="E1" class="btn btn-info">$('ul')</button>
+        <button id="E2" class="btn btn-info">$('ol')</button>
+        <button id="E3" class="btn btn-info">$('ul.bleu')</button>
 
         <ul class="list-group rouge">
             <li class="list-group-item impair">premier élément de la liste à puces</li>
@@ -137,6 +143,23 @@
             $('#p3').text('Le paragraphe numéro 3');
             $('#p4').text('Le paragraphe numéro 4');
         });
+
+
+//        Exemple numéro 2
+
+        $('#E1').click(function () {
+            $('ul').css('color', 'red');
+        });
+
+        $('#E2').click(function () {
+            $('ol').css('color', 'blue');
+        });
+
+        $('#E3').click(function () {
+            $('ul.bleu').css('color', 'orange');
+        });
+
+
 
     });
 
