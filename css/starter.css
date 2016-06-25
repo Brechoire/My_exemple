@@ -27,6 +27,7 @@ body {
     border: 1px solid darkgrey;
     border-radius: 2px;
     box-shadow: #2890d5;
+    margin-bottom: 1.5rem;
 }
 
 .info{
