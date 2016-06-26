@@ -24,7 +24,7 @@
         <p id="p4" class="p-1">Le paragraphe numéro 4</p>
         <p id="p5">Le paragraphe numéro 5</p>
 
-        <div id="code-spoil-1">
+        <div class="col-md-12" id="code-spoil-1">
         <pre class="line-numbers">
             <code class="language-js">
             $(function () {
@@ -68,9 +68,12 @@
         <p>E1 : Selectionne tout les <code>ul</code> en rouge<br>
             E2 : Selectionne tout les <code>ol</code> en bleu<br>
             E3 : Selectionne tout les <code>ul</code> de <code>class bleu</code> en orange</p>
+            E4 : Selectionne tout les <code>ul</code> contenue dans les <code>div</code> en vert</p>
+
         <button id="E1" class="btn btn-info">$('ul')</button>
         <button id="E2" class="btn btn-info">$('ol')</button>
         <button id="E3" class="btn btn-info">$('ul.bleu')</button>
+        <button id="E4" class="btn btn-info">$('div ul')</button>
 
         <ul class="list-group rouge">
             <li class="list-group-item impair">premier élément de la liste à puces</li>
@@ -90,7 +93,7 @@
             <li class="list-group-item">troisième élément de la liste numérotée</li>
         </ol>
 
-        <div id="code-spoil-2">
+        <div class="col-md-12" id="code-spoil-2">
         <pre class="line-numbers">
             <code class="language-js">
 
@@ -106,6 +109,10 @@
 <script>
 
     $(function () {
+
+        var defaut = $('p').css('background');
+        console.log($('p').css('background'));
+
         $('#code-spoil-1').hide();
         $('#spoil-1').click(function () {
             $('#code-spoil-1').toggle(1550);
@@ -157,6 +164,10 @@
 
         $('#E3').click(function () {
             $('ul.bleu').css('color', 'orange');
+        });
+
+        $('#E4').click(function () {
+            $('div ul').css('color', 'green');
         });
 
 
