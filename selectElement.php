@@ -153,35 +153,35 @@
         </p>
         <hr>
         <div class="row">
-        <div class="col-md-12">
-            <button id="E6" class="btn btn-info btn-block">$('[border*="1"]') en rouge</button>
-            <button id="E7" class="btn btn-info btn-block">$('[title~="site"]') en bleu</button>
-            <button id="E8" class="btn btn-info btn-block">$('[src$="1.png"]')en jaune</button>
-            <button id="E9" class="btn btn-info btn-block">$('img[border!="15"]') en orange</button>
-            <button id="E10" class="btn btn-info btn-block">$('[src^="img/s"]') en vert</button>
-            <button id="reset3" class="btn btn-info btn-block">Reset</button>
-            <button id="spoil-3" class="btn btn-info btn-block">Affiche code source</button>
-        </div>
+            <div class="col-md-12">
+                <button id="E6" class="btn btn-info btn-block">$('[border*="1"]') en rouge</button>
+                <button id="E7" class="btn btn-info btn-block">$('[title~="site"]') en bleu</button>
+                <button id="E8" class="btn btn-info btn-block">$('[src$="1.png"]')en jaune</button>
+                <button id="E9" class="btn btn-info btn-block">$('img[border!="15"]') en orange</button>
+                <button id="E10" class="btn btn-info btn-block">$('[src^="img/s"]') en vert</button>
+                <button id="reset3" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-3" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
         </div>
         <hr>
         <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-2 col-md-offset-1">
-                <img src="img/1.png" class="img-responsive" alt="Responsive image" title="flux rss" border="11">
+            <div class="col-md-12">
+                <div class="col-md-2 col-md-offset-1">
+                    <img src="img/1.png" class="img-responsive" alt="Responsive image" title="flux rss" border="11">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/site2.png" class="img-responsive" alt="Responsive image" title="site linked" border="4">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/3.png" class="img-responsive" alt="Responsive image" title="magasin cora" border="2">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/site4.png" class="img-responsive" alt="Responsive image" title="site blog" border="8">
+                </div>
+                <div class="col-md-2">
+                    <img src="img/5.png" class="img-responsive" alt="Responsive image" title="bmw" border="4">
+                </div>
             </div>
-            <div class="col-md-2">
-                <img src="img/site2.png" class="img-responsive" alt="Responsive image" title="site linked" border="4">
-            </div>
-            <div class="col-md-2">
-                <img src="img/3.png" class="img-responsive" alt="Responsive image" title="magasin cora" border="2">
-            </div>
-            <div class="col-md-2">
-                <img src="img/site4.png" class="img-responsive" alt="Responsive image" title="site blog" border="8">
-            </div>
-            <div class="col-md-2">
-                <img src="img/5.png" class="img-responsive" alt="Responsive image" title="bmw" border="4">
-            </div>
-        </div>
         </div>
         <div class="col-md-12" id="code-spoil-3">
             <pre class="line-numbers">
@@ -214,11 +214,13 @@
     <div class="col-md-12 border-sep" id="exemple4">
         <h2>Exemple de selection n°4</h2>
         <p>
-            E11 : Sélectionne l'éléments <code>ul</code> directement descendants d'éléments <code>li</code> en rouge<br>
-            E12 : Sélectionne l'éléments <code>li</code> directement précédés d'un élément <code>li</code> en vert<br>
+            E11 : Sélectionne l'élément <code>ul</code> directement descendants d'éléments <code>li</code> en rouge<br>
+            E12 : Sélectionne l'élément <code>li</code> directement précédés d'un élément <code>li</code> en vert<br>
             E13 : Sélectionne le premier élément <code>li</code> enfant en orange<br>
             E14 : Sélectionne le dernier élément <code>li</code> en rose<br>
             E15 : Sélectionne le dernier élément <code>li</code> enfant en marron<br>
+            E16 : Sélectionne l'élément <code>li</code> enfants uniques de leur parent en Vert Golf<br>
+            E17 : Sélectionne le deuxième enfant <code>li</code> en abricot<br>
         </p>
         <hr>
         <div class="row">
@@ -228,6 +230,8 @@
                 <button id="E13" class="btn btn-info btn-block">$('li:first-child')</button>
                 <button id="E14" class="btn btn-info btn-block">$('li:last')</button>
                 <button id="E15" class="btn btn-info btn-block">$('li:last-child')</button>
+                <button id="E16" class="btn btn-info btn-block">$('li:only-child')</button>
+                <button id="E17" class="btn btn-info btn-block">$('li:nth-child(2)')</button>
                 <button id="reset4" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -236,19 +240,22 @@
         <hr>
 
         <div class="row">
-        <div class="col-md-12">
-        <ul class="list-group" id="ul1">
-            <li class="list-group-item"> Elément de liste 1
-                <ul class="list-group" id="ul2">
-                    <li class="list-group-item"> Enfant 1</li>
-                    <li class="list-group-item"> Enfant 2</li>
+            <div class="col-md-12">
+                <ul class="list-group" id="ul1">
+                    <li class="list-group-item"> Elément de liste 1
+                        <ul class="list-group" id="ul2">
+                            <li class="list-group-item"> Enfant 1</li>
+                            <li class="list-group-item"> Enfant 2</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"> Elément de liste 2</li>
+                    <li class="list-group-item"> Elément de liste 3</li>
+                    <li class="list-group-item"> Elément de liste 4</li>
                 </ul>
-            </li>
-            <li class="list-group-item"> Elément de liste 2</li>
-            <li class="list-group-item"> Elément de liste 3</li>
-            <li class="list-group-item"> Elément de liste 4</li>
-        </ul>
-        </div>
+                <ul class="list-group" id="ul3">
+                    <li class="list-group-item">Elément ul 3 </li>
+                </ul>
+            </div>
         </div>
         <br>
         <div class="col-md-12" id="code-spoil-4">
@@ -385,6 +392,14 @@
 
         $('#E15').click(function () {
             $('li:last-child').css('color', 'brown');
+        });
+
+        $('#E16').click(function () {
+            $('li:only-child').css('color', '#008356');
+        });
+
+        $('#E17').click(function () {
+            $('li:nth-child(2)').css('color', '#E67E30');
         });
 
         var defautLi = $('li').css('color');
