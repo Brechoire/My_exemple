@@ -132,14 +132,16 @@
             E6: Sélectionne l'image dont l'attribut <code>border</code> contient partiellement ou totalement la valeur <code>1</code><br>
             E7: Sélectionne l'image dont l'attribut <code>title</code> contient le mot « site » délimité par une espace.<br>
             E8: Sélectionne l'image dont l'attribut <code>src</code> se termine par <code>1.png</code><br>
+            E9: Sélectionne l'image qui ne possède par un attribut <code>border</code> égal à <code>15</code><br>
+            E10: Sélectionne l'image dont l'attribut <code>src</code> commence par <code>img/s</code>.<br>
         </p>
         <br>
         <div class="col-md-12">
-            <button id="E6" class="btn btn-info">$('[border*="1"]')</button>
-            <button id="E7" class="btn btn-info">$('[title~="site"]')</button>
-            <button id="E8" class="btn btn-info">$('[src$="1.png"]')</button>
-            <button id="E9" class="btn btn-info">$('img[border!="15"]')</button>
-            <button id="E10" class="btn btn-info">$('[src^="img/s"]')</button>
+            <button id="E6" class="btn btn-info">$('[border*="1"]') en rouge</button>
+            <button id="E7" class="btn btn-info">$('[title~="site"]') en bleu</button>
+            <button id="E8" class="btn btn-info">$('[src$="1.png"]')en jaune</button>
+            <button id="E9" class="btn btn-info">$('img[border!="15"]') en orange</button>
+            <button id="E10" class="btn btn-info">$('[src^="img/s"]') en vert</button>
             <button id="spoil-3" class="btn btn-info">Affiche code source</button>
         </div>
         <hr>
@@ -163,29 +165,68 @@
             <pre class="line-numbers">
                 <code class="language-js">
                     $('#E6').click(function () {
-                        $('[border*="1"]').css('border', '3px solid red');
+                    $('[border*="1"]').css('border', '3px solid red');
                     });
 
                     $('#E7').click(function () {
-                        $('[title~="site"]').css('border', '3px solid blue');
+                    $('[title~="site"]').css('border', '3px solid blue');
                     });
 
                     $('#E8').click(function () {
-                        $('[src$="1.png"]').css('border', '3px solid yellow');
+                    $('[src$="1.png"]').css('border', '3px solid yellow');
                     });
 
                     $('#E9').click(function () {
-                        $('img[border!="15"]').css('border', '3px solid orange');
+                    $('img[border!="15"]').css('border', '3px solid orange');
                     });
 
                     $('#E10').click(function () {
-                        $('[src^="img/s"]').css('border', '3px solid green');
+                    $('[src^="img/s"]').css('border', '3px solid green');
                     });
                 </code>
             </pre>
         </div>
         <br>
     </div>  <!--    Fin exemple 3-->
+
+    <div class="col-md-12 border-sep" id="exemple4">
+        <h2>Exemple de selection n°4</h2>
+        <p>
+            E11 : Sélectionne l'éléments <code>ul</code> directement descendants d'éléments <code>li</code> en rouge<br>
+            E12 : Sélectionne l'éléments <code>li</code> directement précédés d'un élément <code>li</code> en vert<br>
+            E13 : Sélectionne le premier élément <code>li</code> enfant en orange<br>
+            E14 : Sélectionne le dernier élément <code>li</code> en rose<br>
+            E15 : Sélectionne le dernier élément <code>li</code> enfant en marron<br>
+        </p>
+
+        <button id="E11" class="btn btn-info">$('li > ul')</button>
+        <button id="E12" class="btn btn-info">$('li + li')</button>
+        <button id="E13" class="btn btn-info">$('li:first-child')</button>
+        <button id="E14" class="btn btn-info">$('li:last')</button>
+        <button id="E15" class="btn btn-info">$('li:last-child')</button>
+        <button id="reset4" class="btn btn-info">Reset</button>
+        <button id="spoil-4" class="btn btn-info">Affiche code source</button>
+        <ul class="list-group" id="ul1">
+            <li class="list-group-item"> Elément de liste 1
+                <ul class="list-group" id="ul2">
+                    <li class="list-group-item"> Enfant 1</li>
+                    <li class="list-group-item"> Enfant 2</li>
+                </ul>
+            </li>
+            <li class="list-group-item"> Elément de liste 2</li>
+            <li class="list-group-item"> Elément de liste 3</li>
+            <li class="list-group-item"> Elément de liste 4</li>
+        </ul>
+        <br>
+        <div class="col-md-12" id="code-spoil-4">
+            <pre class="line-numbers">
+                <code class="language-js">
+
+                </code>
+            </pre>
+        </div>
+        <br>
+    </div>  <!--    Fin exemple 4-->
 
 </div>
 
@@ -207,6 +248,11 @@
         $('#code-spoil-3').hide();
         $('#spoil-3').click(function () {
             $('#code-spoil-3').toggle(1550);
+        });
+
+        $('#code-spoil-4').hide();
+        $('#spoil-4').click(function () {
+            $('#code-spoil-4').toggle(1550);
         });
 
         // Si je clique sur Exemple 1
@@ -281,6 +327,38 @@
         $('#E10').click(function () {
             $('[src^="img/s"]').css('border', '3px solid green');
         });
+
+//        Exemple numéro 4
+
+        $('#E11').click(function () {
+            $('li > ul').css('color', 'red');
+        });
+
+        $('#E12').click(function () {
+            $('li + li').css('color', 'green');
+        });
+
+        $('#E13').click(function () {
+            $('li:first-child').css('color', 'orange');
+        });
+
+        $('#E14').click(function () {
+            $('li:last').css('color', 'pink');
+        });
+
+        $('#E15').click(function () {
+            $('li:last-child').css('color', 'brown');
+        });
+
+        var defautLi = $('li').css('color');
+        var defautUl = $('ul').css('color');
+        var defautLiUl = $('li > ul').css('color');
+        $('#reset4').click(function () {
+            $('li').css('color', defautLi);
+            $('ul').css('color', defautUl);
+            $('li > ul').css('color', defautLiUl);
+        });
+
     });
 
 </script>
