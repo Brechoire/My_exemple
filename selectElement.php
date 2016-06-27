@@ -11,12 +11,18 @@
             Exemple 2 : Ajoute une couleur rouge sur le p1 et rose sur le p2<br>
             Exemple 3 : Ajoute une couleur bleu sur le p2 et orange sur le p4
         </p>
+        <hr>
 
-        <button id="exemple1BTN" class="btn btn-info">Exemple 1</button>
-        <button id="exemple2BTN" class="btn btn-info">Exemple 2</button>
-        <button id="exemple3BTN" class="btn btn-info">Exemple 3</button>
-        <button id="reset" class="btn btn-info">Reset</button>
-        <button id="spoil-1" class="btn btn-info">Affiche code source</button>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="exemple1BTN" class="btn btn-info btn-block">Exemple 1</button>
+                <button id="exemple2BTN" class="btn btn-info btn-block">Exemple 2</button>
+                <button id="exemple3BTN" class="btn btn-info btn-block">Exemple 3</button>
+                <button id="reset" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-1" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
+
         <hr>
         <p id="p1">Le paragraphe numéro 1</p>
         <p id="p2" class="p-1">Le paragraphe numéro 2</p>
@@ -72,30 +78,40 @@
             E4 : Sélectionne tout les <code>ul</code> contenue dans les <code>div</code> en vert<br>
             E5 : Sélectionne tout les <code>li</code> qui possèdent un attribut <code>class</code>
         </p>
-        <br>
-        <button id="E1" class="btn btn-info">$('ul')</button>
-        <button id="E2" class="btn btn-info">$('ol')</button>
-        <button id="E3" class="btn btn-info">$('ul.bleu')</button>
-        <button id="E4" class="btn btn-info">$('div ul')</button>
-        <button id="E5" class="btn btn-info">$('li[class]')</button>
-        <button id="spoil-2" class="btn btn-info">Affiche code source</button>
-        <ul class="list-group rouge">
-            <li class="list-group-item impair">premier élément de la liste à puces</li>
-            <li class="list-group-item pair">deuxième élément de la liste à puces</li>
-            <li class="list-group-item impair">troisième élément de la liste à puces</li>
-        </ul>
-        <div>
-            <ul class="list-group bleu">
-                <li class="list-group-item impair">premier élément de la liste à puces</li>
-                <li class="list-group-item pair">deuxième élément de la liste à puces</li>
-                <li class="list-group-item impair">troisième élément de la liste à puces</li>
-            </ul>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E1" class="btn btn-info btn-block">$('ul')</button>
+                <button id="E2" class="btn btn-info btn-block">$('ol')</button>
+                <button id="E3" class="btn btn-info btn-block">$('ul.bleu')</button>
+                <button id="E4" class="btn btn-info btn-block">$('div ul')</button>
+                <button id="E5" class="btn btn-info btn-block">$('li[class]')</button>
+                <button id="spoil-2" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
         </div>
-        <ol class="list-group rouge">
-            <li class="list-group-item">premier élément de la liste numérotée</li>
-            <li class="list-group-item">deuxième élément de la liste numérotée</li>
-            <li class="list-group-item">troisième élément de la liste numérotée</li>
-        </ol>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-group rouge">
+                    <li class="list-group-item impair">premier élément de la liste à puces</li>
+                    <li class="list-group-item pair">deuxième élément de la liste à puces</li>
+                    <li class="list-group-item impair">troisième élément de la liste à puces</li>
+                </ul>
+                <div>
+                    <ul class="list-group bleu">
+                        <li class="list-group-item impair">premier élément de la liste à puces</li>
+                        <li class="list-group-item pair">deuxième élément de la liste à puces</li>
+                        <li class="list-group-item impair">troisième élément de la liste à puces</li>
+                    </ul>
+                </div>
+                <ol class="list-group rouge">
+                    <li class="list-group-item">premier élément de la liste numérotée</li>
+                    <li class="list-group-item">deuxième élément de la liste numérotée</li>
+                    <li class="list-group-item">troisième élément de la liste numérotée</li>
+                </ol>
+            </div>
+        </div>
+
 
         <div class="col-md-12" id="code-spoil-2">
             <pre class="line-numbers">
@@ -135,31 +151,37 @@
             E9: Sélectionne l'image qui ne possède par un attribut <code>border</code> égal à <code>15</code><br>
             E10: Sélectionne l'image dont l'attribut <code>src</code> commence par <code>img/s</code>.<br>
         </p>
-        <br>
+        <hr>
+        <div class="row">
         <div class="col-md-12">
-            <button id="E6" class="btn btn-info">$('[border*="1"]') en rouge</button>
-            <button id="E7" class="btn btn-info">$('[title~="site"]') en bleu</button>
-            <button id="E8" class="btn btn-info">$('[src$="1.png"]')en jaune</button>
-            <button id="E9" class="btn btn-info">$('img[border!="15"]') en orange</button>
-            <button id="E10" class="btn btn-info">$('[src^="img/s"]') en vert</button>
-            <button id="spoil-3" class="btn btn-info">Affiche code source</button>
+            <button id="E6" class="btn btn-info btn-block">$('[border*="1"]') en rouge</button>
+            <button id="E7" class="btn btn-info btn-block">$('[title~="site"]') en bleu</button>
+            <button id="E8" class="btn btn-info btn-block">$('[src$="1.png"]')en jaune</button>
+            <button id="E9" class="btn btn-info btn-block">$('img[border!="15"]') en orange</button>
+            <button id="E10" class="btn btn-info btn-block">$('[src^="img/s"]') en vert</button>
+            <button id="reset3" class="btn btn-info btn-block">Reset</button>
+            <button id="spoil-3" class="btn btn-info btn-block">Affiche code source</button>
+        </div>
         </div>
         <hr>
-
-        <div class="col-md-2 col-md-offset-1">
-            <img src="img/1.png" class="img-responsive" alt="Responsive image" title="flux rss" border="11">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-2 col-md-offset-1">
+                <img src="img/1.png" class="img-responsive" alt="Responsive image" title="flux rss" border="11">
+            </div>
+            <div class="col-md-2">
+                <img src="img/site2.png" class="img-responsive" alt="Responsive image" title="site linked" border="4">
+            </div>
+            <div class="col-md-2">
+                <img src="img/3.png" class="img-responsive" alt="Responsive image" title="magasin cora" border="2">
+            </div>
+            <div class="col-md-2">
+                <img src="img/site4.png" class="img-responsive" alt="Responsive image" title="site blog" border="8">
+            </div>
+            <div class="col-md-2">
+                <img src="img/5.png" class="img-responsive" alt="Responsive image" title="bmw" border="4">
+            </div>
         </div>
-        <div class="col-md-2">
-            <img src="img/site2.png" class="img-responsive" alt="Responsive image" title="site linked" border="4">
-        </div>
-        <div class="col-md-2">
-            <img src="img/3.png" class="img-responsive" alt="Responsive image" title="magasin cora" border="2">
-        </div>
-        <div class="col-md-2">
-            <img src="img/site4.png" class="img-responsive" alt="Responsive image" title="site blog" border="8">
-        </div>
-        <div class="col-md-2">
-            <img src="img/5.png" class="img-responsive" alt="Responsive image" title="bmw" border="4">
         </div>
         <div class="col-md-12" id="code-spoil-3">
             <pre class="line-numbers">
@@ -198,14 +220,23 @@
             E14 : Sélectionne le dernier élément <code>li</code> en rose<br>
             E15 : Sélectionne le dernier élément <code>li</code> enfant en marron<br>
         </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E11" class="btn btn-info btn-block">$('li > ul')</button>
+                <button id="E12" class="btn btn-info btn-block">$('li + li')</button>
+                <button id="E13" class="btn btn-info btn-block">$('li:first-child')</button>
+                <button id="E14" class="btn btn-info btn-block">$('li:last')</button>
+                <button id="E15" class="btn btn-info btn-block">$('li:last-child')</button>
+                <button id="reset4" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
 
-        <button id="E11" class="btn btn-info">$('li > ul')</button>
-        <button id="E12" class="btn btn-info">$('li + li')</button>
-        <button id="E13" class="btn btn-info">$('li:first-child')</button>
-        <button id="E14" class="btn btn-info">$('li:last')</button>
-        <button id="E15" class="btn btn-info">$('li:last-child')</button>
-        <button id="reset4" class="btn btn-info">Reset</button>
-        <button id="spoil-4" class="btn btn-info">Affiche code source</button>
+        <hr>
+
+        <div class="row">
+        <div class="col-md-12">
         <ul class="list-group" id="ul1">
             <li class="list-group-item"> Elément de liste 1
                 <ul class="list-group" id="ul2">
@@ -217,6 +248,8 @@
             <li class="list-group-item"> Elément de liste 3</li>
             <li class="list-group-item"> Elément de liste 4</li>
         </ul>
+        </div>
+        </div>
         <br>
         <div class="col-md-12" id="code-spoil-4">
             <pre class="line-numbers">
@@ -326,6 +359,10 @@
 
         $('#E10').click(function () {
             $('[src^="img/s"]').css('border', '3px solid green');
+        });
+        var defautImg = $('img').css('border');
+        $('#reset3').click(function () {
+            $('img').css('border', defautImg);
         });
 
 //        Exemple numéro 4
