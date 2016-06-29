@@ -7,7 +7,8 @@
         <h2>Exemple de selection n°1</h2>
         <small>Selection via un ID (même principe pour les class)</small>
         <p>Je souhaite selectionner attribut <code>p</code> qui possède un <code>id</code> ou une <code>class</code></p>
-        <p>Exemple 1 : Ajoute une couleur vert au paragraphe avec l'id p1<br>
+        <p>
+            Exemple 1 : Ajoute une couleur vert au paragraphe avec l'id p1<br>
             Exemple 2 : Ajoute une couleur rouge sur le p1 et rose sur le p2<br>
             Exemple 3 : Ajoute une couleur bleu sur le p2 et orange sur le p4
         </p>
@@ -15,7 +16,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button id="exemple1BTN" class="btn btn-info btn-block">Exemple 1</button>
+                <button id="exemple1BTN" class="btn btn-info btn-block">Ajoute une couleur vert au paragraphe avec l'id p1</button>
                 <button id="exemple2BTN" class="btn btn-info btn-block">Exemple 2</button>
                 <button id="exemple3BTN" class="btn btn-info btn-block">Exemple 3</button>
                 <button id="reset" class="btn btn-info btn-block">Reset</button>
@@ -484,30 +485,30 @@
 
     <div class="col-md-12 border-sep" id="exemple8">
         <h2>Exemple de selection n°8</h2>
-
+        <small>Pour éviter la propagation dans la page, j'utilise une class pour englober mon script</small>
         <p>
             E29 : Coloration de la première cellule <code>td</code> en rose <br>
-            E30 : <br>
-            E31 : <br>
-            E32 : <br>
-            E33 : <br>
-            E34 : <br>
-            E35 : <br>
-            E36 : <br>
-            E37 : <br>
+            E30 : Coloration de la dernière ligne en vert<br>
+            E31 : Coloration des cellules vides en gris<br>
+            E32 : Coloration des lignes paires en bleu<br>
+            E33 : Coloration des cellules paires en pourpre<br>
+            E34 : Coloration des lignes d'index supérieur à 2 en marron<br>
+            E35 : Coloration des lignes d'index supérieur à 1, et, dans le sous-ensemble correspondant, des lignes d'index inférieur à 5 en jaune<br>
+            E36 : Coloration des cellules d'index supérieur à 5, et, dans le sous-ensemble correspondant, des cellules d'index inférieur à 11 en orange<br>
+            E37 : Coloration de toutes les lignes à l'exception de la dernière en rouge<br>
         </p>
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E29" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E30" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E31" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E32" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E33" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E34" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E35" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E36" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
-                <button id="E37" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E29" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:first').css('background', 'pink');</button>
+                <button id="E30" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:last').css('background', 'green');</button>
+                <button id="E31" class="btn btn-info btn-block">$('.formulaireExempleTable').find(':empty').css('background', 'grey');</button>
+                <button id="E32" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:even').css('background', 'blue');</button>
+                <button id="E33" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:even').css('background', 'purple');</button>
+                <button id="E34" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:gt(1)').css('background', 'brown');</button>
+                <button id="E35" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:gt(0):lt(4)').css('background', 'yellow');</button>
+                <button id="E36" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:gt(4):lt(10)').css('background', 'orange');</button>
+                <button id="E37" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');</button>
                 <button id="reset8" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-8" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -516,7 +517,7 @@
         <hr>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 formulaireExempleTable">
                 <form>
                     <table border=1 class="table">
                         <tr><td></td><td>Salle 1</td><td>Salle 2</td></tr>
@@ -533,7 +534,41 @@
         <div class="col-md-12" id="code-spoil-8">
             <pre class="line-numbers">
                 <code class="language-js">
+                 $('#E29').click(function () {
+                    $('.formulaireExempleTable').find('td:first').css('background', 'pink');
+                });
 
+                $('#E30').click(function () {
+                    $('.formulaireExempleTable').find('tr:last').css('background', 'green');
+                });
+
+                $('#E31').click(function () {
+                    $('.formulaireExempleTable').find(':empty').css('background', 'grey');
+                });
+
+                $('#E32').click(function () {
+                    $('.formulaireExempleTable').find('tr:even').css('background', 'blue');
+                });
+
+                $('#E33').click(function () {
+                    $('.formulaireExempleTable').find('td:even').css('background', 'purple');
+                });
+
+                $('#E34').click(function () {
+                    $('.formulaireExempleTable').find('td:gt(1)').css('background', 'brown');
+                });
+
+                $('#E35').click(function () {
+                    $('.formulaireExempleTable').find('tr:gt(0):lt(4)').css('background', 'yellow');
+                });
+
+                $('#E36').click(function () {
+                    $('.formulaireExempleTable').find('td:gt(4):lt(10)').css('background', 'orange');
+                });
+
+                $('#E37').click(function () {
+                    $('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');
+                });
                 </code>
             </pre>
         </div>
@@ -581,6 +616,12 @@
         $('#spoil-7').click(function () {
             $('#code-spoil-7').toggle(1550);
         });
+
+        $('#code-spoil-8').hide();
+        $('#spoil-8').click(function () {
+            $('#code-spoil-8').toggle(1550);
+        });
+
 
 
         // Si je clique sur Exemple 1
@@ -773,7 +814,49 @@
 //    Exemple numéro 8
 
     $('#E29').click(function () {
-        $('td:first').css('background', 'pink');
+        $('.formulaireExempleTable').find('td:first').css('background', 'pink');
+    });
+
+    $('#E30').click(function () {
+        $('.formulaireExempleTable').find('tr:last').css('background', 'green');
+    });
+
+    $('#E31').click(function () {
+        $('.formulaireExempleTable').find(':empty').css('background', 'grey');
+    });
+
+    $('#E32').click(function () {
+        $('.formulaireExempleTable').find('tr:even').css('background', 'blue');
+    });
+
+    $('#E33').click(function () {
+        $('.formulaireExempleTable').find('td:even').css('background', 'purple');
+    });
+
+    $('#E34').click(function () {
+        $('.formulaireExempleTable').find('td:gt(1)').css('background', 'brown');
+    });
+
+    $('#E35').click(function () {
+        $('.formulaireExempleTable').find('tr:gt(0):lt(4)').css('background', 'yellow');
+    });
+
+    $('#E36').click(function () {
+        $('.formulaireExempleTable').find('td:gt(4):lt(10)').css('background', 'orange');
+    });
+
+    $('#E37').click(function () {
+        $('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');
+    });
+
+
+    var defautTableTr =  $('tr').css('background');
+    var defautTableTd =  $('td').css('background');
+    console.log(defautTableTr);
+    $('#reset8').click(function () {
+        $('tr').css('background', defautTableTr);
+        $('td').css('background', defautTableTd);
+        console.log('Ok');
     });
 
 </script>
