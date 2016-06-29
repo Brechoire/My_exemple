@@ -368,7 +368,7 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E23" class="btn btn-info btn-block"> $('.titleExemple:header').css('color','red');</button>
+                <button id="E23" class="btn btn-info btn-block">$('.title-titre').find(':header').css('color','red');</button>
                 <button id="E24" class="btn btn-info btn-block">$('#divShow:hidden').show();</button>
                 <button id="E25" class="btn btn-info btn-block">$('.titleExemple:header:not(h1)').hide();</button>
                 <button id="reset6" class="btn btn-info btn-block">Reset</button>
@@ -379,7 +379,7 @@
         <hr>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 title-titre">
                 <h1 class="titleExemple">Titre de niveau 1</h1>
                 <h2 class="titleExemple">Titre de niveau 2</h2>
                 <h3 class="titleExemple">Titre de niveau 3</h3>
@@ -387,7 +387,8 @@
                 <div id="divShow">Texte dans une balise div</div>
             </div>
         </div>
-        <br>
+
+        <hr>
         <div class="col-md-12" id="code-spoil-6">
             <pre class="line-numbers">
                 <code class="language-js">
@@ -413,12 +414,16 @@
         <h2>Exemple de selection n°7</h2>
 
         <p>
-
+            E26 : Coloration de tous les champs de saisie en jaune<br>
+            E27 : Coloration du champ type <code>password</code> en rouge <br>
+            E28 : Redimensionnement d'un champ de type <code>image</code>  <br>
         </p>
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E26" class="btn btn-info btn-block">Test</button>
+                <button id="E26" class="btn btn-info btn-block">$('.formulaireExemple').find(':input').css('background','yellow');</button>
+                <button id="E27" class="btn btn-info btn-block">$('.formulaireExemple').find(':password').css('background','red');</button>
+                <button id="E28" class="btn btn-info btn-block">$('.formulaireExemple').find(':image').css('width','100px');</button>
                 <button id="reset7" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-7" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -427,7 +432,7 @@
         <hr>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 formulaireExemple">
                 <form>
                     <div class="form-group">
                         <label>Nom d'utilisateur</label>
@@ -460,12 +465,55 @@
         <div class="col-md-12" id="code-spoil-7">
             <pre class="line-numbers">
                 <code class="language-js">
+                    $('#E26').click(function () {
+                        $('.formulaireExemple').find(':input').css('background','yellow');
+                    });
 
+                    $('#E27').click(function () {
+                        $('.formulaireExemple').find(':password').css('background','red');
+                    });
+
+                    $('#E28').click(function () {
+                        $('.formulaireExemple').find(':image').css('width','100px');
+                    });
                 </code>
             </pre>
         </div>
         <br>
     </div>  <!--    Fin exemple 7-->
+
+    <div class="col-md-12 border-sep" id="exemple8">
+        <h2>Exemple de selection n°8</h2>
+
+        <p>
+
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E29" class="btn btn-info btn-block">$('.formulaireExemple').find(':image').css('width','100px');</button>
+                <button id="reset8" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-8" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12" id="code-spoil-8">
+            <pre class="line-numbers">
+                <code class="language-js">
+
+                </code>
+            </pre>
+        </div>
+        <br>
+    </div>  <!--    Fin exemple 8-->
 
 </div>
 
@@ -502,6 +550,11 @@
         $('#code-spoil-6').hide();
         $('#spoil-6').click(function () {
             $('#code-spoil-6').toggle(1550);
+        });
+
+        $('#code-spoil-7').hide();
+        $('#spoil-7').click(function () {
+            $('#code-spoil-7').toggle(1550);
         });
 
 
@@ -585,7 +638,7 @@
 //        Exemple numéro 4
 
         $('#E11').click(function () {
-            $('li > ul').css('color', 'red');
+            $('li > ul').css('color', 'rgb(255,0,0)');
         });
 
         $('#E12').click(function () {
@@ -652,7 +705,7 @@
     //        Exemple numéro 6
 
     $('#E23').click(function () {
-        $('.titleExemple:header').css('color','red');
+        $('.title-titre').find(':header').css('color','red');
     });
 
     $('#divShow').hide();
@@ -672,6 +725,25 @@
 
 //    Exemple numéro 7
 
+    $('#E26').click(function () {
+        $('.formulaireExemple').find(':input').css('background','yellow');
+    });
+
+    $('#E27').click(function () {
+        $('.formulaireExemple').find(':password').css('background','red');
+    });
+
+    $('#E28').click(function () {
+        $('.formulaireExemple').find(':image').css('width','100px');
+    });
+
+
+    var defautColorForm =  $('.formulaireExemple').find(':input').css('background');
+    var defautTailleImage =  $('.formulaireExemple').find(':image').css('width');
+    $('#reset7').click(function () {
+        $('.formulaireExemple').find(':input').css('background', defautColorForm);
+        $('.formulaireExemple').find(':image').css('width', defautTailleImage);
+    });
 
 
 </script>
