@@ -680,9 +680,7 @@
         $('#spoil-8').click(function () {
             $('#code-spoil-8').toggle(1550);
         });
-
-
-
+        
         // Si je clique sur Exemple 1
         $('#exemple1BTN').click(function () {
             $('#p1').css('background', 'green').css('color', 'white');
@@ -862,7 +860,6 @@
         $('.formulaireExemple').find(':image').css('width','100px');
     });
 
-
     var defautColorForm =  $('.formulaireExemple').find(':input').css('background');
     var defautTailleImage =  $('.formulaireExemple').find(':image').css('width');
     $('#reset7').click(function () {
@@ -908,16 +905,12 @@
         $('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');
     });
 
-
     var defautTableTr =  $('tr').css('background');
     var defautTableTd =  $('td').css('background');
-    console.log(defautTableTr);
     $('#reset8').click(function () {
         $('tr').css('background', defautTableTr);
         $('td').css('background', defautTableTd);
-        console.log('Ok');
     });
 
 </script>
 <?php include 'footer.php'; ?>
-
