@@ -2,6 +2,65 @@
 <div class="row starter-template">
     <div class="col-md-12">
         <h1 class="text-center">La selection des éléments</h1>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sélecteurs d'attributs</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple1" class="btn btn-default">Exemple 1</a>
+                <a href="#exemple2" class="btn btn-default">Exemple 2</a>
+                <a href="#exemple3" class="btn btn-default">Exemple 3</a>
+
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sélecteurs hiérarchiques</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple4" class="btn btn-default">Exemple 4</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Pseudo-sélecteurs d'éléments sélectionnés</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple5" class="btn btn-default">Exemple 5</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sélecteurs d'éléments particuliers</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple6" class="btn btn-default">Exemple 6</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Pseudo-sélecteurs spécifiques aux formulaires</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple7" class="btn btn-default">Exemple 7</a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sélecteurs utilisés dans les tableaux</h3>
+            </div>
+            <div class="panel-body">
+                <a href="#exemple8" class="btn btn-default">Exemple 8</a>
+            </div>
+        </div>
+
+
     </div>
     <div class="col-md-12 border-sep" id="exemple1">
         <h2>Exemple de selection n°1</h2>
