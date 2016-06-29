@@ -42,6 +42,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">jQuery <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="selectElement.php">Sélection d'éléments</a></li>
+                        <li><a href="changeContent.php">Modifier le contenu d'un élément</a></li>
                     </ul>
                 </li>
             </ul>
