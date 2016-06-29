@@ -262,31 +262,31 @@
             <pre class="line-numbers">
                 <code class="language-js">
                     $('#E11').click(function () {
-                        $('li > ul').css('color', 'red');
+                    $('li > ul').css('color', 'red');
                     });
 
                     $('#E12').click(function () {
-                        $('li + li').css('color', 'green');
+                    $('li + li').css('color', 'green');
                     });
 
                     $('#E13').click(function () {
-                        $('li:first-child').css('color', 'orange');
+                    $('li:first-child').css('color', 'orange');
                     });
 
                     $('#E14').click(function () {
-                        $('li:last').css('color', 'pink');
+                    $('li:last').css('color', 'pink');
                     });
 
                     $('#E15').click(function () {
-                        $('li:last-child').css('color', 'brown');
+                    $('li:last-child').css('color', 'brown');
                     });
 
                     $('#E16').click(function () {
-                        $('li:only-child').css('color', '#008356');
+                    $('li:only-child').css('color', '#008356');
                     });
 
                     $('#E17').click(function () {
-                        $('li:nth-child(2)').css('color', '#E67E30');
+                    $('li:nth-child(2)').css('color', '#E67E30');
                     });
                 </code>
             </pre>
@@ -294,16 +294,26 @@
         <br>
     </div>  <!--    Fin exemple 4-->
 
+
+
     <div class="col-md-12 border-sep" id="exemple5">
         <h2>Exemple de selection n°5</h2>
+        <small>Pour éviter la propagation dans la page, j'utilise une class à la place de l'attribut <code>p</code></small>
         <p>
-            E17 : Sélectionne le deuxième enfant <code>li</code> en abricot<br>
+            E18 : Sélectionne l'élément <code>p</code> pair en rouge<br>
+            E19 : Sélectionne l'élément <code>p</code> impair en orange<br>
+            E20 : Sélectionne l'élément <code>p</code> après le deuxième en bleu<br>
+            E21 : Sélectionne l'élément <code>p</code> d'index 4 en rose<br>
+            E22 : Sélectionne l'élément <code>p</code> avant le quatrième en vert<br>
         </p>
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E18" class="btn btn-info btn-block">$('li > ul')</button>
-
+                <button id="E18" class="btn btn-info btn-block">$('[class="exemple5"]:even')</button>
+                <button id="E19" class="btn btn-info btn-block">$('[class="exemple5"]:odd')</button>
+                <button id="E20" class="btn btn-info btn-block">$('[class="exemple5"]:gt(1)')</button>
+                <button id="E21" class="btn btn-info btn-block">$('[class="exemple5"]:eq(3)')</button>
+                <button id="E22" class="btn btn-info btn-block">$('[class="exemple5"]:lt(3)')</button>
                 <button id="reset5" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-5" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -313,19 +323,93 @@
 
         <div class="row">
             <div class="col-md-12">
-
+                <p class="exemple5">Mon paragraphe numéro 1</p>
+                <p class="exemple5">Mon paragraphe numéro 2</p>
+                <p class="exemple5">Mon paragraphe numéro 3</p>
+                <p class="exemple5">Mon paragraphe numéro 4</p>
+                <p class="exemple5">Mon paragraphe numéro 5</p>
             </div>
         </div>
         <br>
-        <div class="col-md-12" id="code-spoil-4">
+        <div class="col-md-12" id="code-spoil-5">
             <pre class="line-numbers">
                 <code class="language-js">
+                    $('#E18').click(function () {
+                    $('[class="exemple5"]:even').css('color', 'red');
+                    });
 
+                    $('#E19').click(function () {
+                    $('[class="exemple5"]:odd').css('color', 'orange');
+                    });
+
+                    $('#E20').click(function () {
+                    $('[class="exemple5"]:gt(1)').css('color', 'blue');
+                    });
+
+                    $('#E21').click(function () {
+                    $('[class="exemple5"]:eq(3)').css('color', 'pink');
+                    });
+
+                    $('#E22').click(function () {
+                    $('[class="exemple5"]:lt(3)').css('color', 'green');
+                    });
                 </code>
             </pre>
         </div>
         <br>
     </div>  <!--    Fin exemple 5-->
+
+    <div class="col-md-12 border-sep" id="exemple6">
+        <h2>Exemple de selection n°6</h2>
+
+        <p>
+            E23 : Sélectionne tous les titres <code>h1, h2, h3...</code> en rouge<br>
+            E24 : Affiche l'élément caché avec l'<code>id</code> divShow<br>
+            E25 : Dissimulation de tous les titres sauf le titre <code>h1</code><br>
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E23" class="btn btn-info btn-block"> $('.titleExemple:header').css('color','red');</button>
+                <button id="E24" class="btn btn-info btn-block">$('#divShow:hidden').show();</button>
+                <button id="E25" class="btn btn-info btn-block">$('.titleExemple:header:not(h1)').hide();</button>
+                <button id="reset6" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-6" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="titleExemple">Titre de niveau 1</h1>
+                <h2 class="titleExemple">Titre de niveau 2</h2>
+                <h3 class="titleExemple">Titre de niveau 3</h3>
+                <p>Un paragraphe de texte</p>
+                <div id="divShow">Texte dans une balise div</div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12" id="code-spoil-6">
+            <pre class="line-numbers">
+                <code class="language-js">
+                    $('#E23').click(function () {
+                        $('.titleExemple:header').css('color','red');
+                    });
+
+                    $('#divShow').hide();
+                    $('#E24').click(function () {
+                        $('#divShow:hidden').show();
+                    });
+
+                    $('#E25').click(function () {
+                        $('.titleExemple:header:not(h1)').hide();
+                    });
+                </code>
+            </pre>
+        </div>
+        <br>
+    </div>  <!--    Fin exemple 6-->
 
 </div>
 
@@ -353,6 +437,17 @@
         $('#spoil-4').click(function () {
             $('#code-spoil-4').toggle(1550);
         });
+
+        $('#code-spoil-5').hide();
+        $('#spoil-5').click(function () {
+            $('#code-spoil-5').toggle(1550);
+        });
+
+        $('#code-spoil-6').hide();
+        $('#spoil-6').click(function () {
+            $('#code-spoil-6').toggle(1550);
+        });
+
 
         // Si je clique sur Exemple 1
         $('#exemple1BTN').click(function () {
@@ -470,6 +565,53 @@
             $('li > ul').css('color', defautLiUl);
         });
 
+//        Exemple numéro 5
+
+        $('#E18').click(function () {
+            $('[class="exemple5"]:even').css('color', 'red');
+        });
+
+        $('#E19').click(function () {
+            $('[class="exemple5"]:odd').css('color', 'orange');
+        });
+
+        $('#E20').click(function () {
+            $('[class="exemple5"]:gt(1)').css('color', 'blue');
+        });
+
+        $('#E21').click(function () {
+            $('[class="exemple5"]:eq(3)').css('color', 'pink');
+        });
+
+        $('#E22').click(function () {
+            $('[class="exemple5"]:lt(3)').css('color', 'green');
+        });
+
+        var defautColor = $('[class="exemple5"]').css('color');
+        $('#reset5').click(function () {
+            $('[class="exemple5"]').css('color', defautColor);
+        });
+    });
+
+    //        Exemple numéro 6
+
+    $('#E23').click(function () {
+        $('.titleExemple:header').css('color','red');
+    });
+
+    $('#divShow').hide();
+    $('#E24').click(function () {
+        $('#divShow:hidden').show();
+    });
+
+    $('#E25').click(function () {
+        $('.titleExemple:header:not(h1)').hide();
+    });
+    var defautColorHeader =  $('.titleExemple:header').css('color');
+    $('#reset6').click(function () {
+        $('#divShow').hide();
+        $('.titleExemple:header:not(h1)').show();
+        $('.titleExemple:header').css('color', defautColorHeader);
     });
 
 </script>
