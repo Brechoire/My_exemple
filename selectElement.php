@@ -261,12 +261,71 @@
         <div class="col-md-12" id="code-spoil-4">
             <pre class="line-numbers">
                 <code class="language-js">
+                    $('#E11').click(function () {
+                        $('li > ul').css('color', 'red');
+                    });
 
+                    $('#E12').click(function () {
+                        $('li + li').css('color', 'green');
+                    });
+
+                    $('#E13').click(function () {
+                        $('li:first-child').css('color', 'orange');
+                    });
+
+                    $('#E14').click(function () {
+                        $('li:last').css('color', 'pink');
+                    });
+
+                    $('#E15').click(function () {
+                        $('li:last-child').css('color', 'brown');
+                    });
+
+                    $('#E16').click(function () {
+                        $('li:only-child').css('color', '#008356');
+                    });
+
+                    $('#E17').click(function () {
+                        $('li:nth-child(2)').css('color', '#E67E30');
+                    });
                 </code>
             </pre>
         </div>
         <br>
     </div>  <!--    Fin exemple 4-->
+
+    <div class="col-md-12 border-sep" id="exemple5">
+        <h2>Exemple de selection n°5</h2>
+        <p>
+            E17 : Sélectionne le deuxième enfant <code>li</code> en abricot<br>
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E18" class="btn btn-info btn-block">$('li > ul')</button>
+
+                <button id="reset5" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-5" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12" id="code-spoil-4">
+            <pre class="line-numbers">
+                <code class="language-js">
+
+                </code>
+            </pre>
+        </div>
+        <br>
+    </div>  <!--    Fin exemple 5-->
 
 </div>
 
