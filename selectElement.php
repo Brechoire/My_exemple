@@ -33,35 +33,33 @@
         <div class="col-md-12" id="code-spoil-1">
         <pre class="line-numbers">
             <code class="language-js">
-                $(function () {
-                // Si je clique sur Exemple 1
                 $('#exemple1BTN').click(function () {
-                $('#p1').css('background', 'green').css('color', 'white');
-                $('#p1').text('Le paragraphe 1 est vert');
+                    $('#p1').css('background', 'green').css('color', 'white');
+                    $('#p1').text('Le paragraphe 1 est vert');
                 });
-                // Si je clique sur Exemple 2
+
                 $('#exemple2BTN').click(function () {
-                $('#p1').css('background', 'red').css('color', 'white');
-                $('#p1').text('Le paragraphe 1 est rouge');
-                $('#p2').css('background', 'pink').css('color', 'white');
-                $('#p2').text('Le paragraphe 2 est rose');
+                    $('#p1').css('background', 'red').css('color', 'white');
+                    $('#p1').text('Le paragraphe 1 est rouge');
+                    $('#p2').css('background', 'pink').css('color', 'white');
+                    $('#p2').text('Le paragraphe 2 est rose');
                 });
-                // Si je clique sur Exemple 3
+
                 $('#exemple3BTN').click(function () {
-                $('#p2').css('background', 'blue').css('color', 'white');
-                $('#p2').text('Le paragraphe 2 est bleu');
-                $('#p4').css('background', 'orange').css('color', 'white');
-                $('#p4').text('Le paragraphe 4 est orange');
+                    $('#p2').css('background', 'blue').css('color', 'white');
+                    $('#p2').text('Le paragraphe 2 est bleu');
+                    $('#p4').css('background', 'orange').css('color', 'white');
+                    $('#p4').text('Le paragraphe 4 est orange');
                 });
-                // Si je clique sur Reset
+
                 $('#reset').click(function () {
-                $('[id^="p"]').css('background', 'white').css('color', 'black');
-                $('#p1').text('Le paragraphe numéro 1');
-                $('#p2').text('Le paragraphe numéro 2');
-                $('#p3').text('Le paragraphe numéro 3');
-                $('#p4').text('Le paragraphe numéro 4');
+                    $('[id^="p"]').css('background', 'white').css('color', 'black');
+                    $('#p1').text('Le paragraphe numéro 1');
+                    $('#p2').text('Le paragraphe numéro 2');
+                    $('#p3').text('Le paragraphe numéro 3');
+                    $('#p4').text('Le paragraphe numéro 4');
                 });
-                });
+
             </code>
         </pre>
         </div>
@@ -117,23 +115,23 @@
             <pre class="line-numbers">
                 <code class="language-js">
                     $('#E1').click(function () {
-                    $('ul').css('color', 'red');
+                        $('ul').css('color', 'red');
                     });
 
                     $('#E2').click(function () {
-                    $('ol').css('color', 'blue');
+                        $('ol').css('color', 'blue');
                     });
 
                     $('#E3').click(function () {
-                    $('ul.bleu').css('color', 'orange');
+                        $('ul.bleu').css('color', 'orange');
                     });
 
                     $('#E4').click(function () {
-                    $('div ul').css('color', 'green');
+                        $('div ul').css('color', 'green');
                     });
 
                     $('#E5').click(function () {
-                    $('li[class]').css('color', 'grey');
+                        $('li[class]').css('color', 'grey');
                     });
                 </code>
             </pre>
@@ -262,31 +260,31 @@
             <pre class="line-numbers">
                 <code class="language-js">
                     $('#E11').click(function () {
-                    $('li > ul').css('color', 'red');
+                        $('li > ul').css('color', 'red');
                     });
 
                     $('#E12').click(function () {
-                    $('li + li').css('color', 'green');
+                        $('li + li').css('color', 'green');
                     });
 
                     $('#E13').click(function () {
-                    $('li:first-child').css('color', 'orange');
+                        $('li:first-child').css('color', 'orange');
                     });
 
                     $('#E14').click(function () {
-                    $('li:last').css('color', 'pink');
+                        $('li:last').css('color', 'pink');
                     });
 
                     $('#E15').click(function () {
-                    $('li:last-child').css('color', 'brown');
+                        $('li:last-child').css('color', 'brown');
                     });
 
                     $('#E16').click(function () {
-                    $('li:only-child').css('color', '#008356');
+                        $('li:only-child').css('color', '#008356');
                     });
 
                     $('#E17').click(function () {
-                    $('li:nth-child(2)').css('color', '#E67E30');
+                        $('li:nth-child(2)').css('color', '#E67E30');
                     });
                 </code>
             </pre>
@@ -335,23 +333,23 @@
             <pre class="line-numbers">
                 <code class="language-js">
                     $('#E18').click(function () {
-                    $('[class="exemple5"]:even').css('color', 'red');
+                        $('[class="exemple5"]:even').css('color', 'red');
                     });
 
                     $('#E19').click(function () {
-                    $('[class="exemple5"]:odd').css('color', 'orange');
+                        $('[class="exemple5"]:odd').css('color', 'orange');
                     });
 
                     $('#E20').click(function () {
-                    $('[class="exemple5"]:gt(1)').css('color', 'blue');
+                        $('[class="exemple5"]:gt(1)').css('color', 'blue');
                     });
 
                     $('#E21').click(function () {
-                    $('[class="exemple5"]:eq(3)').css('color', 'pink');
+                        $('[class="exemple5"]:eq(3)').css('color', 'pink');
                     });
 
                     $('#E22').click(function () {
-                    $('[class="exemple5"]:lt(3)').css('color', 'green');
+                        $('[class="exemple5"]:lt(3)').css('color', 'green');
                     });
                 </code>
             </pre>
@@ -410,6 +408,64 @@
         </div>
         <br>
     </div>  <!--    Fin exemple 6-->
+
+    <div class="col-md-12 border-sep" id="exemple7">
+        <h2>Exemple de selection n°7</h2>
+
+        <p>
+
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="E26" class="btn btn-info btn-block">Test</button>
+                <button id="reset7" class="btn btn-info btn-block">Reset</button>
+                <button id="spoil-7" class="btn btn-info btn-block">Affiche code source</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label>Nom d'utilisateur</label>
+                        <input type="text" name="nom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <input type="password" name="pass" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Sexe</label>
+                        Homme <input type="radio" name="sexe" value="H">
+                        Femme <input type="radio" name="sexe" value="F">
+                    </div>
+                    <div class="form-group">
+                        <label>Commentaires</label>
+                        <textarea rows="3" name="commentaires" class="form-control">Tapez vos commentaires ici</textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="image" src="img/checkbox.png">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Envoyer"  class="btn btn-default">
+                        <input type="reset" value="Annuler"  class="btn btn-default">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12" id="code-spoil-7">
+            <pre class="line-numbers">
+                <code class="language-js">
+
+                </code>
+            </pre>
+        </div>
+        <br>
+    </div>  <!--    Fin exemple 7-->
 
 </div>
 
@@ -613,6 +669,10 @@
         $('.titleExemple:header:not(h1)').show();
         $('.titleExemple:header').css('color', defautColorHeader);
     });
+
+//    Exemple numéro 7
+
+
 
 </script>
 <?php include 'footer.php'; ?>
