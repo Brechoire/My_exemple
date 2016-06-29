@@ -486,12 +486,28 @@
         <h2>Exemple de selection n°8</h2>
 
         <p>
-
+            E29 : Coloration de la première cellule <code>td</code> en rose <br>
+            E30 : <br>
+            E31 : <br>
+            E32 : <br>
+            E33 : <br>
+            E34 : <br>
+            E35 : <br>
+            E36 : <br>
+            E37 : <br>
         </p>
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E29" class="btn btn-info btn-block">$('.formulaireExemple').find(':image').css('width','100px');</button>
+                <button id="E29" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E30" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E31" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E32" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E33" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E34" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E35" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E36" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
+                <button id="E37" class="btn btn-info btn-block">$('td:first').css('background', 'pink');</button>
                 <button id="reset8" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-8" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -501,7 +517,16 @@
 
         <div class="row">
             <div class="col-md-12">
-
+                <form>
+                    <table border=1 class="table">
+                        <tr><td></td><td>Salle 1</td><td>Salle 2</td></tr>
+                        <tr><td>Lundi</td><td>X</td><td>X</td></tr>
+                        <tr><td>Mardi</td><td></td><td></td></tr>
+                        <tr><td>Mercredi</td><td>X</td><td></td></tr>
+                        <tr><td>Jeudi</td><td></td><td>X</td></tr>
+                        <tr><td>Vendredi</td><td>X</td><td>X</td></tr>
+                    </table>
+                </form>
             </div>
         </div>
         <br>
@@ -745,6 +770,11 @@
         $('.formulaireExemple').find(':image').css('width', defautTailleImage);
     });
 
+//    Exemple numéro 8
+
+    $('#E29').click(function () {
+        $('td:first').css('background', 'pink');
+    });
 
 </script>
 <?php include 'footer.php'; ?>
