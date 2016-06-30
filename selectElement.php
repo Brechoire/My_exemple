@@ -64,7 +64,11 @@
     </div>
     <div class="col-md-12 border-sep" id="exemple1">
         <h2>Exemple de selection n°1</h2>
-        <small>Selection via un ID (même principe pour les class)</small>
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Selection via un <code>id</code> (même principe pour les <code>class</code>)
+        </div>
+
         <p>Je souhaite selectionner attribut <code>p</code> qui possède un <code>id</code> ou une <code>class</code></p>
         <p>
             Exemple 1 : Ajoute une couleur vert au paragraphe avec l'id p1<br>
@@ -75,7 +79,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button id="exemple1BTN" class="btn btn-info btn-block">Ajoute une couleur vert au paragraphe avec l'id p1</button>
+                <button id="exemple1BTN" class="btn btn-info btn-block">Exemple 1</button>
                 <button id="exemple2BTN" class="btn btn-info btn-block">Exemple 2</button>
                 <button id="exemple3BTN" class="btn btn-info btn-block">Exemple 3</button>
                 <button id="reset" class="btn btn-info btn-block">Reset</button>
@@ -139,11 +143,11 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E1" class="btn btn-info btn-block">$('ul')</button>
-                <button id="E2" class="btn btn-info btn-block">$('ol')</button>
-                <button id="E3" class="btn btn-info btn-block">$('ul.bleu')</button>
-                <button id="E4" class="btn btn-info btn-block">$('div ul')</button>
-                <button id="E5" class="btn btn-info btn-block">$('li[class]')</button>
+                <button id="E1" class="btn btn-info btn-block">E1 : $('ul')</button>
+                <button id="E2" class="btn btn-info btn-block">E2 : $('ol')</button>
+                <button id="E3" class="btn btn-info btn-block">E3 : $('ul.bleu')</button>
+                <button id="E4" class="btn btn-info btn-block">E4 : $('div ul')</button>
+                <button id="E5" class="btn btn-info btn-block">E5 : $('li[class]')</button>
                 <button id="spoil-2" class="btn btn-info btn-block">Affiche code source</button>
             </div>
         </div>
@@ -212,11 +216,11 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E6" class="btn btn-info btn-block">$('[border*="1"]') en rouge</button>
-                <button id="E7" class="btn btn-info btn-block">$('[title~="site"]') en bleu</button>
-                <button id="E8" class="btn btn-info btn-block">$('[src$="1.png"]')en jaune</button>
-                <button id="E9" class="btn btn-info btn-block">$('img[border!="15"]') en orange</button>
-                <button id="E10" class="btn btn-info btn-block">$('[src^="img/s"]') en vert</button>
+                <button id="E6" class="btn btn-info btn-block">E6 : $('[border*="1"]') en rouge</button>
+                <button id="E7" class="btn btn-info btn-block">E7 : $('[title~="site"]') en bleu</button>
+                <button id="E8" class="btn btn-info btn-block">E8 : $('[src$="1.png"]')en jaune</button>
+                <button id="E9" class="btn btn-info btn-block">E9 : $('img[border!="15"]') en orange</button>
+                <button id="E10" class="btn btn-info btn-block">E10 : $('[src^="img/s"]') en vert</button>
                 <button id="reset3" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-3" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -283,13 +287,13 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E11" class="btn btn-info btn-block">$('li > ul')</button>
-                <button id="E12" class="btn btn-info btn-block">$('li + li')</button>
-                <button id="E13" class="btn btn-info btn-block">$('li:first-child')</button>
-                <button id="E14" class="btn btn-info btn-block">$('li:last')</button>
-                <button id="E15" class="btn btn-info btn-block">$('li:last-child')</button>
-                <button id="E16" class="btn btn-info btn-block">$('li:only-child')</button>
-                <button id="E17" class="btn btn-info btn-block">$('li:nth-child(2)')</button>
+                <button id="E11" class="btn btn-info btn-block">E11 : $('li > ul')</button>
+                <button id="E12" class="btn btn-info btn-block">E12 : $('li + li')</button>
+                <button id="E13" class="btn btn-info btn-block">E13 : $('li:first-child')</button>
+                <button id="E14" class="btn btn-info btn-block">E14 : $('li:last')</button>
+                <button id="E15" class="btn btn-info btn-block">E15 : $('li:last-child')</button>
+                <button id="E16" class="btn btn-info btn-block">E16 : $('li:only-child')</button>
+                <button id="E17" class="btn btn-info btn-block">E17 : $('li:nth-child(2)')</button>
                 <button id="reset4" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -356,7 +360,11 @@
 
     <div class="col-md-12 border-sep" id="exemple5">
         <h2>Exemple de selection n°5</h2>
-        <small>Pour éviter la propagation dans la page, j'utilise une class à la place de l'attribut <code>p</code></small>
+
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Pour éviter la propagation dans la page, j'utilise une class à la place de l'attribut <code>p</code>
+        </div>
         <p>
             E18 : Sélectionne l'élément <code>p</code> pair en rouge<br>
             E19 : Sélectionne l'élément <code>p</code> impair en orange<br>
@@ -367,11 +375,11 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E18" class="btn btn-info btn-block">$('[class="exemple5"]:even')</button>
-                <button id="E19" class="btn btn-info btn-block">$('[class="exemple5"]:odd')</button>
-                <button id="E20" class="btn btn-info btn-block">$('[class="exemple5"]:gt(1)')</button>
-                <button id="E21" class="btn btn-info btn-block">$('[class="exemple5"]:eq(3)')</button>
-                <button id="E22" class="btn btn-info btn-block">$('[class="exemple5"]:lt(3)')</button>
+                <button id="E18" class="btn btn-info btn-block">E18 : $('[class="exemple5"]:even')</button>
+                <button id="E19" class="btn btn-info btn-block">E19 : $('[class="exemple5"]:odd')</button>
+                <button id="E20" class="btn btn-info btn-block">E20 : $('[class="exemple5"]:gt(1)')</button>
+                <button id="E21" class="btn btn-info btn-block">E21 : $('[class="exemple5"]:eq(3)')</button>
+                <button id="E22" class="btn btn-info btn-block">E22 : $('[class="exemple5"]:lt(3)')</button>
                 <button id="reset5" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-5" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -428,9 +436,9 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E23" class="btn btn-info btn-block">$('.title-titre').find(':header').css('color','red');</button>
-                <button id="E24" class="btn btn-info btn-block">$('#divShow:hidden').show();</button>
-                <button id="E25" class="btn btn-info btn-block">$('.titleExemple:header:not(h1)').hide();</button>
+                <button id="E23" class="btn btn-info btn-block">E23 : $('.title-titre').find(':header').css('color','red');</button>
+                <button id="E24" class="btn btn-info btn-block">E24 : $('#divShow:hidden').show();</button>
+                <button id="E25" class="btn btn-info btn-block">E25 : $('.titleExemple:header:not(h1)').hide();</button>
                 <button id="reset6" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-6" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -481,9 +489,9 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E26" class="btn btn-info btn-block">$('.formulaireExemple').find(':input').css('background','yellow');</button>
-                <button id="E27" class="btn btn-info btn-block">$('.formulaireExemple').find(':password').css('background','red');</button>
-                <button id="E28" class="btn btn-info btn-block">$('.formulaireExemple').find(':image').css('width','100px');</button>
+                <button id="E26" class="btn btn-info btn-block">E26 : $('.formulaireExemple').find(':input').css('background','yellow');</button>
+                <button id="E27" class="btn btn-info btn-block">E27 : $('.formulaireExemple').find(':password').css('background','red');</button>
+                <button id="E28" class="btn btn-info btn-block">E28 : $('.formulaireExemple').find(':image').css('width','100px');</button>
                 <button id="reset7" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-7" class="btn btn-info btn-block">Affiche code source</button>
             </div>
@@ -544,7 +552,11 @@
 
     <div class="col-md-12 border-sep" id="exemple8">
         <h2>Exemple de selection n°8</h2>
-        <small>Pour éviter la propagation dans la page, j'utilise une class pour englober mon script</small>
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Pour éviter la propagation dans la page, j'utilise une class pour englober mon script
+        </div>
+
         <p>
             E29 : Coloration de la première cellule <code>td</code> en rose <br>
             E30 : Coloration de la dernière ligne en vert<br>
@@ -559,15 +571,15 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <button id="E29" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:first').css('background', 'pink');</button>
-                <button id="E30" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:last').css('background', 'green');</button>
-                <button id="E31" class="btn btn-info btn-block">$('.formulaireExempleTable').find(':empty').css('background', 'grey');</button>
-                <button id="E32" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:even').css('background', 'blue');</button>
-                <button id="E33" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:even').css('background', 'purple');</button>
-                <button id="E34" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:gt(1)').css('background', 'brown');</button>
-                <button id="E35" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:gt(0):lt(4)').css('background', 'yellow');</button>
-                <button id="E36" class="btn btn-info btn-block">$('.formulaireExempleTable').find('td:gt(4):lt(10)').css('background', 'orange');</button>
-                <button id="E37" class="btn btn-info btn-block">$('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');</button>
+                <button id="E29" class="btn btn-info btn-block">E29 : $('.formulaireExempleTable').find('td:first').css('background', 'pink');</button>
+                <button id="E30" class="btn btn-info btn-block">E30 : $('.formulaireExempleTable').find('tr:last').css('background', 'green');</button>
+                <button id="E31" class="btn btn-info btn-block">E31 : $('.formulaireExempleTable').find(':empty').css('background', 'grey');</button>
+                <button id="E32" class="btn btn-info btn-block">E32 : $('.formulaireExempleTable').find('tr:even').css('background', 'blue');</button>
+                <button id="E33" class="btn btn-info btn-block">E33 : $('.formulaireExempleTable').find('td:even').css('background', 'purple');</button>
+                <button id="E34" class="btn btn-info btn-block">E34 : $('.formulaireExempleTable').find('td:gt(1)').css('background', 'brown');</button>
+                <button id="E35" class="btn btn-info btn-block">E35 : $('.formulaireExempleTable').find('tr:gt(0):lt(4)').css('background', 'yellow');</button>
+                <button id="E36" class="btn btn-info btn-block">E36 : $('.formulaireExempleTable').find('td:gt(4):lt(10)').css('background', 'orange');</button>
+                <button id="E37" class="btn btn-info btn-block">E37 : $('.formulaireExempleTable').find('tr:not(tr:last)').css('background', 'red');</button>
                 <button id="reset8" class="btn btn-info btn-block">Reset</button>
                 <button id="spoil-8" class="btn btn-info btn-block">Affiche code source</button>
             </div>

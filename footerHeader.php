@@ -7,5 +7,6 @@
 <script src="js/dropdown.js"></script>
 <script src="js/alert.js"></script>
 <script src="js/tooltip.js"></script>
+<script src="js/popover.js"></script>
 <script src="js/app.js"></script>
 <script src="js/prism.js"></script>
