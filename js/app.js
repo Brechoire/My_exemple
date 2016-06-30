@@ -2,7 +2,8 @@
  * Created by Jeranders on 24/06/2016.
  */
 $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
 
     $(".dropdown").hover(
         function() {
