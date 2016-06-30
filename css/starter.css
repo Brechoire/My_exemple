@@ -50,3 +50,16 @@ pre > code{
 .b{
     border:1px solid green;
 }
+
+.rouge{
+    color: red;
+}
+.orange{
+    color: orange;
+}
+.vert{
+    color: green;
+}
+.jaune{
+    color: yellow;;
+}

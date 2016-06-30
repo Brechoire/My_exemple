@@ -12,8 +12,8 @@
                 </div>
             </div>
 
-
         </div>
+
         <div class="col-md-12 border-sep" id="exemple1">
             <h2>Exemple Getters et setters n°1 </span>
                 <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Getters et setters" data-content="Plutôt que de différencier les méthodes chargées de lire (ces méthodes sont dites getters, de l'anglais to get qui signifie « obtenir ») et de modifier (ces méthodes sont dites setters, de l'anglais to set qui signifie « définir ») les valeurs HTML ou CSS, les concepteurs de jQuery ont choisi de leur donner le même nom.">
@@ -24,7 +24,6 @@
                 <i class="icon icon-info-circle icon-lg"></i>
                 <strong>Info !</strong> J'utilise des <code>class</code> pour éviter la propagation dans la page.
             </div>
-                <small></small>
             <p>
                 E1: Pour connaitre la valeur de la couleur par défaut du paragraphe (getters) on utilise <code>$('.p1').css('color');</code><br>
                 E2: Pour changer la valeur de la couleur par défaut du paragraphe (setters) on utilise <code>$('.p1').css('color', 'MaCouleur');</code><br>
@@ -53,7 +52,6 @@
                     <p class="p1">Mon paragraphe avec une class "p1"</p>
                     <img class="i1" src="img/1.png" alt="Test image">
                     <span class="t-i1"></span>
-
                     <form>
                         <table border=1 class="table">
                             <tr><td></td><td>Salle 1</td><td>Salle 2</td></tr>
@@ -117,7 +115,50 @@
             <br>
         </div>  <!--    Fin exemple 1-->
 
+        <div class="col-md-12 border-sep" id="exemple2">
+            <h2>Accéder aux attributs des balises HTML </span>
 
+            </h2>
+            <div class="alert alert-info">
+                <i class="icon icon-info-circle icon-lg"></i>
+                <strong>Info !</strong> J'utilise des <code>class</code> pour éviter la propagation dans la page.
+            </div>
+
+            <p>
+                E7 : Ajoute une <code>class</code> avec la méthode <code>attr</code><br>
+                E8 : Supprime la <code>class</code> et donc la couleur avec la méthode removeAttr<br>
+            <p>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <button id="E7" class="btn btn-info btn-block">E7 : Ajoute une class</button>
+                    <button id="E8" class="btn btn-info btn-block">E8 : Supprime la class</button>
+
+                    <button id="reset2" class="btn btn-info btn-block">Reset</button>
+                    <button id="spoil-2" class="btn btn-info btn-block">Affiche code source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12" id="ex2">
+                    <p id="p-id-1">Un paragraphe sans class mais avec un id</p>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="code-spoil-2">
+                <pre class="line-numbers">
+                    <code class="language-js">
+
+                    </code>
+                </pre>
+            </div>
+            <br>
+        </div>  <!--    Fin exemple 2-->
 
     </div>
 
@@ -170,7 +211,17 @@
                 $('.t-t1').text('La taille par défaut de la première cellule : ' + tdTaille + " et la couleur " + couleurRouge);
             });
 
+            $('#E7').click(function () {
+                var test = prompt('Choisir une couleur entre rouge, orange, vert, jaune');
+                $('#p-id-1').attr('class', test);
+            });
+
+            $('#E8').click(function () {
+                $('#p-id-1').removeAttr('class');
+            });
+
             $('#reset1').click(function () {
+                $('.i1').css('width', tailleImgDefaut);
                 $('.p1').text(texteDefaut);
                 $('.t-t1').text(texteDefautTable);
                 $('.p1').css('color', premierParagraphe);
