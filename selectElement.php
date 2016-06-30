@@ -64,7 +64,11 @@
     </div>
     <div class="col-md-12 border-sep" id="exemple1">
         <h2>Exemple de selection n°1</h2>
-        <small>Selection via un ID (même principe pour les class)</small>
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Selection via un <code>id</code> (même principe pour les <code>class</code>)
+        </div>
+
         <p>Je souhaite selectionner attribut <code>p</code> qui possède un <code>id</code> ou une <code>class</code></p>
         <p>
             Exemple 1 : Ajoute une couleur vert au paragraphe avec l'id p1<br>
@@ -356,7 +360,11 @@
 
     <div class="col-md-12 border-sep" id="exemple5">
         <h2>Exemple de selection n°5</h2>
-        <small>Pour éviter la propagation dans la page, j'utilise une class à la place de l'attribut <code>p</code></small>
+
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Pour éviter la propagation dans la page, j'utilise une class à la place de l'attribut <code>p</code>
+        </div>
         <p>
             E18 : Sélectionne l'élément <code>p</code> pair en rouge<br>
             E19 : Sélectionne l'élément <code>p</code> impair en orange<br>
@@ -544,7 +552,11 @@
 
     <div class="col-md-12 border-sep" id="exemple8">
         <h2>Exemple de selection n°8</h2>
-        <small>Pour éviter la propagation dans la page, j'utilise une class pour englober mon script</small>
+        <div class="alert alert-info">
+            <i class="icon icon-info-circle icon-lg"></i>
+            <strong>Info !</strong> Pour éviter la propagation dans la page, j'utilise une class pour englober mon script
+        </div>
+
         <p>
             E29 : Coloration de la première cellule <code>td</code> en rose <br>
             E30 : Coloration de la dernière ligne en vert<br>
