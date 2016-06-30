@@ -36,8 +36,12 @@
                 <div class="col-md-12">
                     <button id="E1" class="btn btn-info btn-block">E1 : Valeur de la couleur par défaut paragraphe</button>
                     <button id="E2" class="btn btn-info btn-block">E2 : Change la couleur du paragraphe en rouge</button>
+                    <button id="E3" class="btn btn-info btn-block">E3 : Valeur de la taille par défaut de l'image</button>
+                    <button id="E4" class="btn btn-info btn-block">E4 : Change la taille de l'image en 100px</button>
+                    <button id="E5" class="btn btn-info btn-block">E5 : Valeur par défaut de la taille de la première cellule du tableau et de la couleur</button>
+                    <button id="E6" class="btn btn-info btn-block">E6 : Change la taille de la cellule en 90px et la couleur en rouge</button>
 
-                    <button id="reset" class="btn btn-info btn-block">Reset</button>
+                    <button id="reset1" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-1" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
             </div>
@@ -48,13 +52,64 @@
                 <div class="col-md-12" id="ex1">
                     <p class="p1">Mon paragraphe avec une class "p1"</p>
                     <img class="i1" src="img/1.png" alt="Test image">
+                    <span class="t-i1"></span>
+
+                    <form>
+                        <table border=1 class="table">
+                            <tr><td></td><td>Salle 1</td><td>Salle 2</td></tr>
+                            <tr><td>Lundi</td><td>X</td><td>X</td></tr>
+                            <tr><td>Mardi</td><td></td><td></td></tr>
+                            <tr><td>Mercredi</td><td>X</td><td></td></tr>
+                            <tr><td>Jeudi</td><td></td><td>X</td></tr>
+                            <tr><td>Vendredi</td><td>X</td><td>X</td></tr>
+                        </table>
+                    </form>
+                    <span class="t-t1"></span>
                 </div>
             </div>
 
             <div class="col-md-12" id="code-spoil-1">
                 <pre class="line-numbers">
                     <code class="language-js">
+                        var texteDefaut = $('.p1').text();
+                        var texteDefautTable = $('.t-t1').text();
+                        var premierParagraphe = $('.p1').css('color');
+                        var tailleImgDefaut = $('.i1').css('width');
+                        var couleurRouge = 'red';
+                        var tailleImg = '100px';
+                        var tdWidthDefaut = $('#ex1').find('td:first').css('width');
+                        var tdBackgroundefaut = $('#ex1').find('td:first').css('background');
+                        var tdTaille = '90px';
 
+                        $('#E1').click(function () {
+                            $('.p1').css('color', premierParagraphe);
+                            $('.p1').text('La couleur par défaut du paragraphe est : ' + premierParagraphe);
+                        });
+
+                        $('#E2').click(function () {
+                            $('.p1').css('color', couleurRouge);
+                            var couleurR = $('.p1').css('color');
+                            $('.p1').text('Mon paragraphe a une couleur : ' + couleurR + ' "Rouge"  ');
+                        });
+
+                        $('#E3').click(function () {
+                            $('.i1').css('width', tailleImgDefaut);
+                            $('.t-i1').text('La taille par défaut de l\'image est : ' + tailleImgDefaut);
+                        });
+
+                        $('#E4').click(function () {
+                            $('.i1').css('width', tailleImg);
+                            $('.t-i1').text('L\'image passe à : ' + tailleImg);
+                        });
+
+                        $('#E5').click(function () {
+                            $('.t-t1').text('La taille par défaut de la première cellule : ' + tdWidthDefaut + " et la couleur " + tdBackgroundefaut);
+                        });
+
+                        $('#E6').click(function () {
+                            $('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                            $('.t-t1').text('La taille par défaut de la première cellule : ' + tdTaille + " et la couleur " + couleurRouge);
+                        });
                     </code>
                 </pre>
             </div>
@@ -68,17 +123,56 @@
 <?php include 'footerHeader.php'; ?>
     <script>
         $(function () {
+            $('#code-spoil-1').hide();
+            $('#spoil-1').click(function () {
+                $('#code-spoil-1').toggle(1550);
+            });
+
+            var texteDefaut = $('.p1').text();
+            var texteDefautTable = $('.t-t1').text();
             var premierParagraphe = $('.p1').css('color');
+            var tailleImgDefaut = $('.i1').css('width');
+            var couleurRouge = 'red';
+            var tailleImg = '100px';
+            var tdWidthDefaut = $('#ex1').find('td:first').css('width');
+            var tdBackgroundefaut = $('#ex1').find('td:first').css('background');
+            var tdTaille = '90px';
+            
             $('#E1').click(function () {
                 $('.p1').css('color', premierParagraphe);
                 $('.p1').text('La couleur par défaut du paragraphe est : ' + premierParagraphe);
             });
 
-            var couleurRouge = 'red';
             $('#E2').click(function () {
                 $('.p1').css('color', couleurRouge);
-               var defautRouge = $('.p1').css('color');
-                $('.p1').text('Mon paragraphe a une couleur : ' + defautRouge + ' "Rouge"  ');
+                var couleurR = $('.p1').css('color');
+                $('.p1').text('Mon paragraphe a une couleur : ' + couleurR + ' "Rouge"  ');
+            });
+
+            $('#E3').click(function () {
+                $('.i1').css('width', tailleImgDefaut);
+                $('.t-i1').text('La taille par défaut de l\'image est : ' + tailleImgDefaut);
+            });
+
+            $('#E4').click(function () {
+                $('.i1').css('width', tailleImg);
+                $('.t-i1').text('L\'image passe à : ' + tailleImg);
+            });
+
+            $('#E5').click(function () {
+                $('.t-t1').text('La taille par défaut de la première cellule : ' + tdWidthDefaut + " et la couleur " + tdBackgroundefaut);
+            });
+
+            $('#E6').click(function () {
+                $('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                $('.t-t1').text('La taille par défaut de la première cellule : ' + tdTaille + " et la couleur " + couleurRouge);
+            });
+
+            $('#reset1').click(function () {
+                $('.p1').text(texteDefaut);
+                $('.t-t1').text(texteDefautTable);
+                $('.p1').css('color', premierParagraphe);
+                $('#ex1').find('td:first').css('width', tdWidthDefaut).css('background', tdBackgroundefaut);
             });
 
         });
