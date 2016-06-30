@@ -16,16 +16,20 @@
         </div>
         <div class="col-md-12 border-sep" id="exemple1">
             <h2>Exemple Getters et setters n°1</h2>
-
+            <div class="alert alert-info">
+                <i class="icon icon-info-circle icon-lg"></i>
+                <strong>Info !</strong> J'utilise des <code>class</code> pour éviter la propagation dans la page.
+            </div>
+                <small></small>
             <p>
-
+                E1: Pour connaitre la valeur par défaut du paragraphe (getters)  on utilise <code>$('.p1').css('color');</code><br>
             <p>
 
             <hr>
 
             <div class="row">
                 <div class="col-md-12">
-                    <button id="E1" class="btn btn-info btn-block">E1</button>
+                    <button id="E1" class="btn btn-info btn-block">Valeur de la couleur par défaut paragraphe</button>
                     <button id="E2" class="btn btn-info btn-block">E2</button>
 
                     <button id="reset" class="btn btn-info btn-block">Reset</button>
