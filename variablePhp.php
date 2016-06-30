@@ -45,7 +45,8 @@
             <div class="col-md-12" id="code-spoil-1">
                 <pre class="line-numbers">
                     <code class="language-php">
-                        $nom = "Brechoire"; // string
+                        nom_de_la_variable = valeur_de_la_variable;
+                        $nom = "Brechoire"; // chaîne de caractères (string)
                         echo $nom; // Affiche le résultat
                     </code>
                 </pre>

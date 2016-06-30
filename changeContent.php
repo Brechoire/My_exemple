@@ -107,7 +107,8 @@
                         });
 
                         $('#E6').click(function () {
-                            $('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                            //$('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                            $('#ex1').find('td:first').css({width: tdTaille, background: couleurRouge});
                             $('.t-t1').text('La taille par défaut de la première cellule : ' + tdTaille + " et la couleur " + couleurRouge);
                         });
                     </code>
@@ -137,7 +138,7 @@
             var tdWidthDefaut = $('#ex1').find('td:first').css('width');
             var tdBackgroundefaut = $('#ex1').find('td:first').css('background');
             var tdTaille = '90px';
-            
+
             $('#E1').click(function () {
                 $('.p1').css('color', premierParagraphe);
                 $('.p1').text('La couleur par défaut du paragraphe est : ' + premierParagraphe);
@@ -164,7 +165,8 @@
             });
 
             $('#E6').click(function () {
-                $('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                //$('#ex1').find('td:first').css('width', tdTaille).css('background', couleurRouge);
+                $('#ex1').find('td:first').css({width: tdTaille, background: couleurRouge});
                 $('.t-t1').text('La taille par défaut de la première cellule : ' + tdTaille + " et la couleur " + couleurRouge);
             });
 
