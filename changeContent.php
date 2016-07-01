@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-md-12 border-sep" id="exemple1">
-            <h2>Exemple Getters et setters n°1 </span>
+            <h2>Exemple Getters et setters n°1
                 <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Getters et setters" data-content="Plutôt que de différencier les méthodes chargées de lire (ces méthodes sont dites getters, de l'anglais to get qui signifie « obtenir ») et de modifier (ces méthodes sont dites setters, de l'anglais to set qui signifie « définir ») les valeurs HTML ou CSS, les concepteurs de jQuery ont choisi de leur donner le même nom.">
                     <span class="glyphicon glyphicon-question-sign" aria-hidden="true">
                 </button>
@@ -116,9 +116,7 @@
         </div>  <!--    Fin exemple 1-->
 
         <div class="col-md-12 border-sep" id="exemple2">
-            <h2>Accéder aux attributs des balises HTML </span>
-
-            </h2>
+            <h2>Accéder aux attributs des balises HTML</h2>
             <div class="alert alert-info">
                 <i class="icon icon-info-circle icon-lg"></i>
                 <strong>Info !</strong> J'utilise des <code>class</code> pour éviter la propagation dans la page.
@@ -126,7 +124,7 @@
 
             <p>
                 E7 : Ajoute une <code>class</code> avec la méthode <code>attr</code><br>
-                E8 : Supprime la <code>class</code> et donc la couleur avec la méthode removeAttr<br>
+                E8 : Supprime la <code>class</code> et donc la couleur avec la méthode <code>removeAttr</code>
             <p>
 
             <hr>
@@ -166,6 +164,44 @@
             </div>
             <br>
         </div>  <!--    Fin exemple 2-->
+
+
+        <div class="col-md-12 border-sep" id="exemple3">
+            <h2>Accéder aux propriétés CSS</h2>
+
+            <p>
+                E9 : Affiche la valeur par défaut de la bordure <code>border</code>, la taille du texte <code>font-size</code>et la couleur de fond du paragraphe <code>background</code> de la <code>class</code> para1
+            <p>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="E9" class="btn btn-info btn-block">E9 : Valeur par défaut</button>
+                    <button id="E10" class="btn btn-info btn-block">E10 : Changer les valeurs</button>
+                    <button id="reset3" class="btn btn-info btn-block">Reset</button>
+                    <button id="spoil-3" class="btn btn-info btn-block">Affiche code source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12" id="ex3">
+                    <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque eveniet ex fuga hic ipsum maxime omnis quia totam voluptatem. Doloribus hic itaque iure maxime molestiae nihil perferendis quae sapiente!</p>
+                    <span class="span-para1"></span>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="code-spoil-3">
+                <pre class="line-numbers">
+                    <code class="language-js">
+
+                    </code>
+                </pre>
+            </div>
+            <br>
+        </div>  <!--    Fin exemple 3-->
 
     </div>
 
@@ -225,6 +261,21 @@
 
             $('#E8').click(function () {
                 $('#p-id-1').removeAttr('class');
+            });
+
+            var paraBorderDefaut = $('.para1').css('border-style');
+            var paraFontSizeDefaut = $('.para1').css('font-size');
+            var paraBackgroundDefaut = $('.para1').css('background-color');
+            $('#E9').click(function () {
+                $('.span-para1').text('Valeur par défaut de la bordure est : "' + paraBorderDefaut + '" la taille du texte est : "' + paraFontSizeDefaut + '" et d\'un fond de "' + paraBackgroundDefaut + '"');
+            });
+
+            $('#E9').click(function () {
+                $('.span-para1').css({
+                    border-style: 'dashed',
+                    font-size: 18px,
+                    background-color: 'red'
+                });
             });
 
             $('#reset1').click(function () {
