@@ -39,27 +39,16 @@ body {
 
 }
 
-p{
-    padding: 2px;
-}
+p{padding: 2px;}
 
-pre > code{
-    font-size: 1.4em;
-}
+pre > code{font-size: 1.4em;}
 
-.b{
-    border:1px solid green;
-}
+.b{border:1px solid green;}
 
-.rouge{
-    color: red;
-}
-.orange{
-    color: orange;
-}
-.vert{
-    color: green;
-}
-.jaune{
-    color: yellow;;
-}
+.rouge{color: red;}
+.orange{color: orange;}
+.vert{color: green;}
+.jaune{color: yellow;}
+
+.petit { font-size: 100%; }
+.grand {font-size: 250%; }

@@ -231,6 +231,46 @@
             <br>
         </div>  <!--    Fin exemple 3-->
 
+        <div class="col-md-12 border-sep" id="exemple4">
+            <h2>Travailler avec l'attribut class</h2>
+
+            <p>
+              E11 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> rouge à "Julia"
+            <p>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="E11" class="btn btn-info btn-block">E1 : Ajoute la class rouge</button>
+                    <button id="reset4" class="btn btn-info btn-block">Reset</button>
+                    <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12" id="ex4">
+                    <span id="jean" class="rouge grand">Jean</span><br>
+                    <span id="pierre">Pierre</span><br>
+                    <span id="paul" class="vert grand">Paul</span><br>
+                    <span id="julia">Julia</span><br>
+                    <span id="eric" class="vert">Eric</span><br>
+                    <span id="kevin" >Kévin</span><br>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="code-spoil-4">
+                <pre class="line-numbers">
+                    <code class="language-js">
+
+                    </code>
+                </pre>
+            </div>
+            <br>
+        </div>  <!--    Fin exemple 4-->
+
     </div>
 
 <?php include 'footerHeader.php'; ?>
@@ -249,6 +289,11 @@
             $('#code-spoil-3').hide();
             $('#spoil-3').click(function () {
                 $('#code-spoil-3').toggle(1550);
+            });
+
+            $('#code-spoil-4').hide();
+            $('#spoil-4').click(function () {
+                $('#code-spoil-4').toggle(1550);
             });
 
             var texteDefaut = $('.p1').text();
@@ -318,6 +363,10 @@
                     backgroundColor: backgroundPara
                 });
                 $('.span-para1').text('La valeur de la couleur est passé à : "' + borderPara + '" la taille et passé à : "' + fontSizePara + '" et la couleur du fond est : "' + backgroundPara + '"');
+            });
+
+            $('#E11').click(function () {
+                $('#julia').addClass('rouge');
             });
 
             $('#reset1').click(function () {
