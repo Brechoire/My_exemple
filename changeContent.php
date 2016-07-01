@@ -270,12 +270,17 @@
                 $('.span-para1').text('Valeur par défaut de la bordure est : "' + paraBorderDefaut + '" la taille du texte est : "' + paraFontSizeDefaut + '" et d\'un fond de "' + paraBackgroundDefaut + '"');
             });
 
-            $('#E9').click(function () {
-                $('.span-para1').css({
-                    border-style: 'dashed',
-                    font-size: 18px,
-                    background-color: 'red'
+            var borderPara ='dashed';
+            var fontSizePara = '18px';
+            var backgroundPara = 'red';
+            $('#E10').click(function () {
+                $('.para1').css({
+                    borderStyle: borderPara,
+                    fontSize: fontSizePara,
+                    backgroundColor: backgroundPara
                 });
+
+                $('.span-para1').text();
             });
 
             $('#reset1').click(function () {
