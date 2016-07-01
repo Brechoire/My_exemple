@@ -12,10 +12,20 @@
                 </div>
             </div>
 
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Accéder aux attributs HTML et aux propriétés CSS</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#exemple2" class="btn btn-default">Accéder aux attributs HTML</a>
+                    <a href="#exemple3" class="btn btn-default">Accéder aux attributs CSS</a>
+                </div>
+            </div>
+
         </div>
 
         <div class="col-md-12 border-sep" id="exemple1">
-            <h2>Exemple Getters et setters n°1
+            <h2>Exemple Getters et setters
                 <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Getters et setters" data-content="Plutôt que de différencier les méthodes chargées de lire (ces méthodes sont dites getters, de l'anglais to get qui signifie « obtenir ») et de modifier (ces méthodes sont dites setters, de l'anglais to set qui signifie « définir ») les valeurs HTML ou CSS, les concepteurs de jQuery ont choisi de leur donner le même nom.">
                     <span class="glyphicon glyphicon-question-sign" aria-hidden="true">
                 </button>
@@ -170,7 +180,8 @@
             <h2>Accéder aux propriétés CSS</h2>
 
             <p>
-                E9 : Affiche la valeur par défaut de la bordure <code>border</code>, la taille du texte <code>font-size</code>et la couleur de fond du paragraphe <code>background</code> de la <code>class</code> para1
+                E9 : Affiche la valeur par défaut de la bordure <code>border</code>, la taille du texte <code>font-size</code>et la couleur de fond du paragraphe <code>background</code> de la <code>class</code> para1 <br>
+                E10 : Modifie la valeur de la taille du texte <code>font-size</code>, le style de la bordure <code>border-style</code> et la couleur de fond <code>background-color</code>
             <p>
 
             <hr>
@@ -196,7 +207,24 @@
             <div class="col-md-12" id="code-spoil-3">
                 <pre class="line-numbers">
                     <code class="language-js">
+                var paraBorderDefaut = $('.para1').css('border-style');
+                var paraFontSizeDefaut = $('.para1').css('font-size');
+                var paraBackgroundDefaut = $('.para1').css('background-color');
+                $('#E9').click(function () {
+                    $('.span-para1').text('Valeur par défaut de la bordure est : "' + paraBorderDefaut + '" la taille du texte est : "' + paraFontSizeDefaut + '" et d\'un fond de "' + paraBackgroundDefaut + '"');
+                });
 
+                var borderPara ='dashed';
+                var fontSizePara = '18px';
+                var backgroundPara = 'red';
+                $('#E10').click(function () {
+                    $('.para1').css({
+                        borderStyle: borderPara,
+                        fontSize: fontSizePara,
+                        backgroundColor: backgroundPara
+                    });
+                    $('.span-para1').text('La valeur de la couleur est passé à : "' + borderPara + '" la taille et passé à : "' + fontSizePara + '" et la couleur du fond est : "' + backgroundPara + '"');
+                })
                     </code>
                 </pre>
             </div>
@@ -211,6 +239,16 @@
             $('#code-spoil-1').hide();
             $('#spoil-1').click(function () {
                 $('#code-spoil-1').toggle(1550);
+            });
+
+            $('#code-spoil-2').hide();
+            $('#spoil-2').click(function () {
+                $('#code-spoil-2').toggle(1550);
+            });
+
+            $('#code-spoil-3').hide();
+            $('#spoil-3').click(function () {
+                $('#code-spoil-3').toggle(1550);
             });
 
             var texteDefaut = $('.p1').text();
@@ -279,8 +317,7 @@
                     fontSize: fontSizePara,
                     backgroundColor: backgroundPara
                 });
-
-                $('.span-para1').text();
+                $('.span-para1').text('La valeur de la couleur est passé à : "' + borderPara + '" la taille et passé à : "' + fontSizePara + '" et la couleur du fond est : "' + backgroundPara + '"');
             });
 
             $('#reset1').click(function () {
@@ -291,6 +328,14 @@
                 $('#ex1').find('td:first').css('width', tdWidthDefaut).css('background', tdBackgroundefaut);
             });
 
+            $('#reset3').click(function () {
+                $('.para1').css({
+                    borderStyle: paraBorderDefaut,
+                    fontSize: paraFontSizeDefaut,
+                    backgroundColor: paraBackgroundDefaut
+                });
+                $('.span-para1').text('');
+            });
         });
     </script>
 <?php include 'footer.php'; ?>
