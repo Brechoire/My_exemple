@@ -22,11 +22,20 @@
                 </div>
             </div>
 
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Travailler avec l'attribut class</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#exemple4" class="btn btn-default">Ajouter et supprimer des classes</a>
+                </div>
+            </div>
+
         </div>
 
         <div class="col-md-12 border-sep" id="exemple1">
             <h2>Exemple Getters et setters
-                <button type="button" class="btn btn-lg btn-warning" data-toggle="popover" title="Getters et setters" data-content="Plutôt que de différencier les méthodes chargées de lire (ces méthodes sont dites getters, de l'anglais to get qui signifie « obtenir ») et de modifier (ces méthodes sont dites setters, de l'anglais to set qui signifie « définir ») les valeurs HTML ou CSS, les concepteurs de jQuery ont choisi de leur donner le même nom.">
+                <button type="button" class="btn btn-warning" data-toggle="popover" title="Getters et setters" data-content="Plutôt que de différencier les méthodes chargées de lire (ces méthodes sont dites getters, de l'anglais to get qui signifie « obtenir ») et de modifier (ces méthodes sont dites setters, de l'anglais to set qui signifie « définir ») les valeurs HTML ou CSS, les concepteurs de jQuery ont choisi de leur donner le même nom.">
                     <span class="glyphicon glyphicon-question-sign" aria-hidden="true">
                 </button>
             </h2>
@@ -232,17 +241,26 @@
         </div>  <!--    Fin exemple 3-->
 
         <div class="col-md-12 border-sep" id="exemple4">
-            <h2>Travailler avec l'attribut class</h2>
-
+            <h2>Travailler avec l'attribut class
+            <button type="button" class="btn  btn-warning" data-toggle="popover" title="Ajouter et supprimer des classes" data-content="addClass() ajoute une classe dans les éléments sélectionnés ;
+                    removeClass() supprime (si elle existe) une classe des éléments sélectionnés ;
+                    toggleClass() accomplit deux actions : si la classe spécifiée n'existe pas dans les éléments sélectionnés, elle y est ajoutée. Si elle existe, elle est supprimée.">
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true">
+            </button>
+            </h2>
             <p>
-              E11 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> rouge à "Julia"
+                E11 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> rouge à "Julia"<br>
+                E12 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> vert et grand à "Julia"<br>
+                E13 : Supprime avec la méthode <code>removeClass</code> la <code>class</code> vert et avec la méthode <code>addClass</code> ajoute la <code>class</code> rouge à Eric<br>
             <p>
 
             <hr>
 
             <div class="row">
                 <div class="col-md-12">
-                    <button id="E11" class="btn btn-info btn-block">E1 : Ajoute la class rouge</button>
+                    <button id="E11" class="btn btn-info btn-block">E11 : Ajoute la class "rouge"</button>
+                    <button id="E12" class="btn btn-info btn-block">E12 : Ajoute la class "vert" et "grand" </button>
+                    <button id="E13" class="btn btn-info btn-block">E13 : Supprime la class vert et ajoute la class rouge </button>
                     <button id="reset4" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
@@ -369,6 +387,14 @@
                 $('#julia').addClass('rouge');
             });
 
+            $('#E12').click(function () {
+                $('#julia').addClass('vert grand');
+            });
+
+            $('#E13').click(function () {
+                $('#eric').removeClass('vert').addClass('rouge');
+            });
+
             $('#reset1').click(function () {
                 $('.i1').css('width', tailleImgDefaut);
                 $('.p1').text(texteDefaut);
@@ -377,13 +403,8 @@
                 $('#ex1').find('td:first').css('width', tdWidthDefaut).css('background', tdBackgroundefaut);
             });
 
-            $('#reset3').click(function () {
-                $('.para1').css({
-                    borderStyle: paraBorderDefaut,
-                    fontSize: paraFontSizeDefaut,
-                    backgroundColor: paraBackgroundDefaut
-                });
-                $('.span-para1').text('');
+            $('#reset4').click(function () {
+                $('#julia').removeAttr('class');
             });
         });
     </script>
