@@ -252,6 +252,8 @@
                 E11 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> rouge à "Julia"<br>
                 E12 : Ajoute avec la méthode <code>addClass</code> la <code>class</code> vert et grand à "Julia"<br>
                 E13 : Supprime avec la méthode <code>removeClass</code> la <code>class</code> vert et avec la méthode <code>addClass</code> ajoute la <code>class</code> rouge à Eric<br>
+                E14 : Supprime avec la méthode <code>removeClass</code> la <code>class</code> vert et grand et avec la méthode <code>addClass</code> ajoute la <code>class</code> rouge et petit à Paul<br>
+                E15 : Supprime avec la méthode <code>toggleClass</code> la <code>class</code> vert et grand et avec la même méthode <code>toggleClass</code> ajoute la <code>class</code> rouge et petit à Paul<br>
             <p>
 
             <hr>
@@ -261,6 +263,8 @@
                     <button id="E11" class="btn btn-info btn-block">E11 : Ajoute la class "rouge"</button>
                     <button id="E12" class="btn btn-info btn-block">E12 : Ajoute la class "vert" et "grand" </button>
                     <button id="E13" class="btn btn-info btn-block">E13 : Supprime la class vert et ajoute la class rouge </button>
+                    <button id="E14" class="btn btn-info btn-block">E14 : Modifie la couleur et taille de Paul avec methode addClass et removeClass </button>
+                    <button id="E15" class="btn btn-info btn-block">E15 : Modifie la couleur et taille de Paul avec methode toggleClass </button>
                     <button id="reset4" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-4" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
@@ -393,6 +397,14 @@
 
             $('#E13').click(function () {
                 $('#eric').removeClass('vert').addClass('rouge');
+            });
+
+            $('#E14').click(function () {
+                $('#paul').removeClass('vert').addClass('rouge').removeClass('grand').addClass('petit');
+            });
+
+            $('#E15').click(function () {
+                $('#paul').toggleClass('vert').toggleClass('rouge').toggleClass('grand').toggleClass('petit');
             });
 
             $('#reset1').click(function () {
