@@ -352,7 +352,7 @@
             <hr>
 
             <div class="row">
-                <div class="col-md-12" id="ex4">
+                <div class="col-md-12" id="ex5">
                     <span id="jerome" class="rouge grand">Jérôme</span><br>
                     <span id="info5"></span>
                 </div>
@@ -381,6 +381,67 @@
             </div>
             <br>
         </div>  <!--    Fin exemple 5-->
+
+        <div class="col-md-12 border-sep" id="exemple6">
+            <h2>Travailler avec les formulaires</h2>
+            <p>
+                E18 :
+            <p>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="E18" class="btn btn-info btn-block">E18</button>
+                    <button id="reset6" class="btn btn-info btn-block">Reset</button>
+                    <button id="spoil-6" class="btn btn-info btn-block">Affiche code source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12" id="ex6">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="nom">Nom d'utilisateur</label>
+                            <input type="text" id="nom" class="form-control">
+                        </div>
+
+
+                        Mot de passe
+                        <input type="password" id="pass"><br />
+
+                        Sexe
+                        H <input type="radio" id="H" name="sexe" value="H">
+                        F <input type="radio" id="F" name="sexe" value="F"><br />
+
+                        Fonction
+                        <select id="fonction">
+                            <option VALUE="etudiant">Etudiant</option>
+                            <option VALUE="ingenieur">Ingénieur</option>
+                            <option VALUE="enseignant">Enseignant</option>
+                            <option VALUE="retraite">Retraité</option>
+                            <option VALUE="autre">Autre</option>
+                        </select><br /><br />
+
+                        <input type="submit" id="envoyer" value="Envoyer">
+                        <input type="reset" id="annuler" value="Annuler">
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-md-12" id="code-spoil-6">
+                <pre class="line-numbers">
+                    <code class="language-js">
+
+                    </code>
+                </pre>
+            </div>
+            <br>
+        </div>  <!--    Fin exemple 6-->
 
     </div>
 
