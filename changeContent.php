@@ -310,12 +310,46 @@
 
                 $('#E15').click(function () {
                     $('#paul').toggleClass('vert').toggleClass('rouge').toggleClass('grand').toggleClass('petit');
-                })
+                });
                     </code>
                 </pre>
             </div>
             <br>
         </div>  <!--    Fin exemple 4-->
+
+        <div class="col-md-12 border-sep" id="exemple5">
+            <h2>Tester l'existence de classes</h2>
+            <p>
+               E16 :
+            <p>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="E16" class="btn btn-info btn-block">E16 : </button>
+                    <button id="reset5" class="btn btn-info btn-block">Reset</button>
+                    <button id="spoil-5" class="btn btn-info btn-block">Affiche code source</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12" id="ex4">
+                    <span id="jerome" class="rouge grand">Jérôme</span>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="code-spoil-5">
+                <pre class="line-numbers">
+                    <code class="language-js">
+
+                    </code>
+                </pre>
+            </div>
+            <br>
+        </div>  <!--    Fin exemple 5-->
 
     </div>
 
