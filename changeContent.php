@@ -320,7 +320,7 @@
         <div class="col-md-12 border-sep" id="exemple5">
             <h2>Tester l'existence de classes</h2>
             <p>
-               E16 :
+               E16 : Vérifie la présence d'une <code>class</code> rouge avec le méthode <code>hasClass</code> sur l'<code>id</code> jerome
             <p>
 
             <hr>
@@ -337,7 +337,8 @@
 
             <div class="row">
                 <div class="col-md-12" id="ex4">
-                    <span id="jerome" class="rouge grand">Jérôme</span>
+                    <span id="jerome" class="rouge grand">Jérôme</span><br>
+                    <span id="info5"></span>
                 </div>
             </div>
 
@@ -464,6 +465,14 @@
 
             $('#E15').click(function () {
                 $('#paul').toggleClass('vert').toggleClass('rouge').toggleClass('grand').toggleClass('petit');
+            });
+
+            $('#E16').click(function () {
+               if($('#jerome').hasClass('rouge')){
+                    $('#info5').text('Le span #jerome possède la class rouge');
+               }else {
+                   $('#info5').text('Le span #jerome ne possède pas la class rouge');
+               }
             });
 
             $('#reset1').click(function () {
