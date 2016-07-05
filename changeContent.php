@@ -384,15 +384,25 @@
 
         <div class="col-md-12 border-sep" id="exemple6">
             <h2>Travailler avec les formulaires</h2>
+            <div class="alert alert-info">
+                <i class="icon icon-info-circle icon-lg"></i>
+                La méthode <code>val()</code> permet de tester/modifier la valeur des zones de texte, boutons radio, cases à cocher, listes déroulantes et zones de liste contenues dans un document HTML.
+            </div>
             <p>
-                E18 :
+                E18 : Lit le nom de l'utilisateur avec la méthode <code>val</code><br>
+                E19 : Lit le password avec la méthode <code>val</code><br>
+                E20 : Lit l'état du bouton <code>radio</code> H. Renvoie <code>true</code> si le bouton est sélectionné, sinon <code>false</code>.
+                E21 :
             <p>
 
             <hr>
 
             <div class="row">
                 <div class="col-md-12">
-                    <button id="E18" class="btn btn-info btn-block">E18</button>
+                    <button id="E18" class="btn btn-info btn-block">E18 : Lit le nom de l'utilisateur</button>
+                    <button id="E19" class="btn btn-info btn-block">E19 : Lit le password</button>
+                    <button id="E20" class="btn btn-info btn-block">E20 : Lit l'état du bouton sur H</button>
+                    <button id="E21" class="btn btn-info btn-block">E21 : </button>
                     <button id="reset6" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-6" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
@@ -407,27 +417,37 @@
                         <div class="form-group">
                             <label for="nom">Nom d'utilisateur</label>
                             <input type="text" id="nom" class="form-control">
+                            <span id="resultatNom"></span>
                         </div>
 
+                        <div class="form-group">
+                            <label for="pass">Mot de passe</label>
+                            <input type="password" id="pass" class="form-control">
+                            <span id="resultatPass"></span>
+                        </div>
 
-                        Mot de passe
-                        <input type="password" id="pass"><br />
+                        <div class="form-group">
+                            <label for="sexe">Sexe</label>
+                            H <input type="radio" id="H" name="sexe" value="H">
+                            F <input type="radio" id="F" name="sexe" value="F"><br>
+                            <span id="resultatBouton"></span>
+                        </div>
 
-                        Sexe
-                        H <input type="radio" id="H" name="sexe" value="H">
-                        F <input type="radio" id="F" name="sexe" value="F"><br />
-
-                        Fonction
-                        <select id="fonction">
-                            <option VALUE="etudiant">Etudiant</option>
-                            <option VALUE="ingenieur">Ingénieur</option>
-                            <option VALUE="enseignant">Enseignant</option>
-                            <option VALUE="retraite">Retraité</option>
-                            <option VALUE="autre">Autre</option>
-                        </select><br /><br />
-
-                        <input type="submit" id="envoyer" value="Envoyer">
-                        <input type="reset" id="annuler" value="Annuler">
+                        <div class="form-group">
+                            <label for="fonction">Fonction</label>
+                            <select id="fonction" class="form-control">
+                                <option value="etudiant">Etudiant</option>
+                                <option value="ingenieur">Ingénieur</option>
+                                <option value="enseignant">Enseignant</option>
+                                <option value="retraite">Retraité</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <span id="resultatSelect"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" id="envoyer" value="Envoyer" class="btn btn-default">
+                            <input type="reset" id="annuler" value="Annuler" class="btn btn-default">
+                        </div>
                     </form>
 
                 </div>
@@ -577,6 +597,26 @@
                 }else {
                     $('#info5').text('Le span #jerome ne possède pas la class rouge ou grand');
                 }
+            });
+
+            $('#E18').click(function () {
+                var resultatNom = $('#nom').val();
+                $('#resultatNom').text(resultatNom);
+            });
+
+            $('#E19').click(function () {
+                var resultatPass = $('#pass').val();
+                $('#resultatPass').text(resultatPass);
+            });
+
+            $('#E20').click(function () {
+                var resultatBouton = $(':radio#H:checked').val();
+                $('#resultatBouton').text(resultatBouton);
+            });
+
+            $('#E21').click(function () {
+                var resultatSelect = $('#fonction').val();
+                $('#resultatSelect').text(resultatSelect);
             });
 
             $('#reset1').click(function () {
