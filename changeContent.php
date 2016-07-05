@@ -255,7 +255,13 @@
                 E14 : Supprime avec la méthode <code>removeClass</code> la <code>class</code> vert et grand et avec la méthode <code>addClass</code> ajoute la <code>class</code> rouge et petit à Paul<br>
                 E15 : Supprime avec la méthode <code>toggleClass</code> la <code>class</code> vert et grand et avec la même méthode <code>toggleClass</code> ajoute la <code>class</code> rouge et petit à Paul<br>
             <p>
-
+            <div class="alert alert-info">
+                <i class="icon icon-info-circle icon-lg"></i>
+                Il est possible de rassembler les class pour alléger le code
+                <code>$('#paul').removeClass('vert').addClass('rouge').removeClass('grand').addClass('petit');</code>
+                <br>
+                <code>$('#paul').removeClass('vert grand').addClass('rouge petit');</code>
+            </div>
             <hr>
 
             <div class="row">
@@ -286,7 +292,25 @@
             <div class="col-md-12" id="code-spoil-4">
                 <pre class="line-numbers">
                     <code class="language-js">
+                $('#E11').click(function () {
+                    $('#julia').addClass('rouge');
+                });
 
+                $('#E12').click(function () {
+                    $('#julia').addClass('vert grand');
+                });
+
+                $('#E13').click(function () {
+                    $('#eric').removeClass('vert').addClass('rouge');
+                });
+
+                $('#E14').click(function () {
+                    $('#paul').removeClass('vert').addClass('rouge').removeClass('grand').addClass('petit');
+                });
+
+                $('#E15').click(function () {
+                    $('#paul').toggleClass('vert').toggleClass('rouge').toggleClass('grand').toggleClass('petit');
+                })
                     </code>
                 </pre>
             </div>
@@ -317,6 +341,7 @@
             $('#spoil-4').click(function () {
                 $('#code-spoil-4').toggle(1550);
             });
+
 
             var texteDefaut = $('.p1').text();
             var texteDefautTable = $('.t-t1').text();
@@ -417,6 +442,8 @@
 
             $('#reset4').click(function () {
                 $('#julia').removeAttr('class');
+                $('#eric').removeClass('rouge').addClass('vert');
+                $('#paul').removeClass('rouge petit').addClass('vert grand');
             });
         });
     </script>
