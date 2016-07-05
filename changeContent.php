@@ -28,6 +28,16 @@
                 </div>
                 <div class="panel-body">
                     <a href="#exemple4" class="btn btn-default">Ajouter et supprimer des classes</a>
+                    <a href="#exemple5" class="btn btn-default">Tester l'existence de classes</a>
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Travailler avec les formulaires</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="#exemple6" class="btn btn-default">Exemple 1</a>
                 </div>
             </div>
 
@@ -44,8 +54,12 @@
                 <strong>Info !</strong> J'utilise des <code>class</code> pour éviter la propagation dans la page.
             </div>
             <p>
-                E1: Pour connaitre la valeur de la couleur par défaut du paragraphe (getters) on utilise <code>$('.p1').css('color');</code><br>
-                E2: Pour changer la valeur de la couleur par défaut du paragraphe (setters) on utilise <code>$('.p1').css('color', 'MaCouleur');</code><br>
+                E1 : Pour connaitre la valeur de la couleur par défaut du paragraphe (getters) on utilise <code>$('.p1').css('color');</code><br>
+                E2 : Pour changer la valeur de la couleur par défaut du paragraphe (setters) on utilise <code>$('.p1').css('color', 'MaCouleur');</code><br>
+                E3 : Affiche la valeur par défaut de la taille de l'image<br>
+                E4 : Modifie la valeur de la taille de l'image à <code>100px</code><br>
+                E5 : Affiche la valeur par défaut de la taille de la première cellule du tableau et de la couleur<br>
+                E6 : Modifie la taille de la cellule en 90px et la couleur en rouge
             <p>
 
             <hr>
@@ -320,14 +334,16 @@
         <div class="col-md-12 border-sep" id="exemple5">
             <h2>Tester l'existence de classes</h2>
             <p>
-               E16 : Vérifie la présence d'une <code>class</code> rouge avec le méthode <code>hasClass</code> sur l'<code>id</code> jerome
+                E16 : Vérifie la présence d'une <code>class</code> rouge avec la méthode <code>hasClass</code> sur l'<code>id</code> jerome<br>
+                E17 : Vérifie la présence des <code>class</code> rouge et grand avec la méthode <code>is</code> sur l'<code>id</code> jerome
             <p>
 
             <hr>
 
             <div class="row">
                 <div class="col-md-12">
-                    <button id="E16" class="btn btn-info btn-block">E16 : </button>
+                    <button id="E16" class="btn btn-info btn-block">E16 : Vérifie avec hasClass</button>
+                    <button id="E17" class="btn btn-info btn-block">E17 : Vérifie avec is</button>
                     <button id="reset5" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-5" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
@@ -345,7 +361,21 @@
             <div class="col-md-12" id="code-spoil-5">
                 <pre class="line-numbers">
                     <code class="language-js">
+                $('#E16').click(function () {
+                   if($('#jerome').hasClass('rouge')){
+                        $('#info5').text('Le span #jerome possède la class rouge');
+                   }else {
+                       $('#info5').text('Le span #jerome ne possède pas la class rouge');
+                   }
+                });
 
+                $('#E17').click(function () {
+                    if($('#jerome').is('.rouge.grand')){
+                        $('#info5').text('Le span #jerome possède la class rouge et grand');
+                    }else {
+                        $('#info5').text('Le span #jerome ne possède pas la class rouge ou grand');
+                    }
+                });
                     </code>
                 </pre>
             </div>
@@ -375,6 +405,11 @@
             $('#code-spoil-4').hide();
             $('#spoil-4').click(function () {
                 $('#code-spoil-4').toggle(1550);
+            });
+
+            $('#code-spoil-5').hide();
+            $('#spoil-5').click(function () {
+                $('#code-spoil-5').toggle(1550);
             });
 
 
@@ -475,6 +510,14 @@
                }
             });
 
+            $('#E17').click(function () {
+                if($('#jerome').is('.rouge.grand')){
+                    $('#info5').text('Le span #jerome possède la class rouge et grand');
+                }else {
+                    $('#info5').text('Le span #jerome ne possède pas la class rouge ou grand');
+                }
+            });
+
             $('#reset1').click(function () {
                 $('.i1').css('width', tailleImgDefaut);
                 $('.p1').text(texteDefaut);
@@ -483,10 +526,28 @@
                 $('#ex1').find('td:first').css('width', tdWidthDefaut).css('background', tdBackgroundefaut);
             });
 
+            $('#reset2').click(function () {
+                $('#p-id-1').removeAttr('class');
+            });
+
+            $('#reset3').click(function () {
+                $('.para1').css({
+                    borderStyle: paraBorderDefaut,
+                    fontSize: paraFontSizeDefaut,
+                    backgroundColor: paraBackgroundDefaut
+                });
+                $('.span-para1').text('');
+
+            });
+
             $('#reset4').click(function () {
                 $('#julia').removeAttr('class');
                 $('#eric').removeClass('rouge').addClass('vert');
                 $('#paul').removeClass('rouge petit').addClass('vert grand');
+            });
+
+            $('#reset5').click(function () {
+                $('#info5').text('');
             });
         });
     </script>
