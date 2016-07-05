@@ -198,7 +198,6 @@
             <br>
         </div>  <!--    Fin exemple 2-->
 
-
         <div class="col-md-12 border-sep" id="exemple3">
             <h2>Accéder aux propriétés CSS</h2>
 
@@ -392,7 +391,11 @@
                 E18 : Lit le nom de l'utilisateur avec la méthode <code>val</code><br>
                 E19 : Lit le password avec la méthode <code>val</code><br>
                 E20 : Lit l'état du bouton <code>radio</code> H. Renvoie <code>true</code> si le bouton est sélectionné, sinon <code>false</code>.
-                E21 :
+                E21 : Lit l'élément sélectionné dans la liste déroulante.<br>
+                E22 : Écrit "Moltes" dans la zone texte Nom de l'utilisateur <code>$('#nom').val('LaValeur')</code><br>
+                E22 : Écrit "abcd" dans la zone texte password <code>$('#pass').val('LaValeur')</code><br>
+                E23 : Sélectionne le bouton <code>radio</code> H.<br>
+                E24 : Sélectionne Retraité dans la liste déroulante.
             <p>
 
             <hr>
@@ -402,7 +405,11 @@
                     <button id="E18" class="btn btn-info btn-block">E18 : Lit le nom de l'utilisateur</button>
                     <button id="E19" class="btn btn-info btn-block">E19 : Lit le password</button>
                     <button id="E20" class="btn btn-info btn-block">E20 : Lit l'état du bouton sur H</button>
-                    <button id="E21" class="btn btn-info btn-block">E21 : </button>
+                    <button id="E21" class="btn btn-info btn-block">E21 : Lit l'élément sélectionné dans la liste déroulante.</button>
+                    <button id="E22" class="btn btn-info btn-block">E22 : Écrit "Moltes" dans la zone texte Nom de l'utilisateur</button>
+                    <button id="E23" class="btn btn-info btn-block">E23 : Écrit "abcd" dans la zone texte <code>password</code></button>
+                    <button id="E24" class="btn btn-info btn-block">E24 : Sélectionne le bouton <code>radio</code> H.</button>
+                    <button id="E25" class="btn btn-info btn-block">E25 : Sélectionne Retraité dans la liste déroulante.</button>
                     <button id="reset6" class="btn btn-info btn-block">Reset</button>
                     <button id="spoil-6" class="btn btn-info btn-block">Affiche code source</button>
                 </div>
@@ -413,7 +420,7 @@
             <div class="row">
                 <div class="col-md-12" id="ex6">
 
-                    <form>
+                    <form id="form">
                         <div class="form-group">
                             <label for="nom">Nom d'utilisateur</label>
                             <input type="text" id="nom" class="form-control">
@@ -456,7 +463,41 @@
             <div class="col-md-12" id="code-spoil-6">
                 <pre class="line-numbers">
                     <code class="language-js">
+                $('#E18').click(function () {
+                    var resultatNom = $('#nom').val();
+                    $('#resultatNom').text(resultatNom);
+                });
 
+                $('#E19').click(function () {
+                    var resultatPass = $('#pass').val();
+                    $('#resultatPass').text(resultatPass);
+                });
+
+                $('#E20').click(function () {
+                    var resultatBouton = $(':radio#H:checked').val();
+                    $('#resultatBouton').text(resultatBouton);
+                });
+
+                $('#E21').click(function () {
+                    var resultatSelect = $('#fonction').val();
+                    $('#resultatSelect').text(resultatSelect);
+                });
+
+                $('#E22').click(function () {
+                $('#nom').val('Moltes');
+                });
+
+                $('#E23').click(function () {
+                    $('#pass').val('abcd');
+                });
+
+                $('#E24').click(function () {
+                    $(':radio').val(['H']);
+                });
+
+                $('#E25').click(function () {
+                    $('#fonction').val('retraite');
+                });
                     </code>
                 </pre>
             </div>
@@ -491,6 +532,11 @@
             $('#code-spoil-5').hide();
             $('#spoil-5').click(function () {
                 $('#code-spoil-5').toggle(1550);
+            });
+
+            $('#code-spoil-6').hide();
+            $('#spoil-6').click(function () {
+                $('#code-spoil-6').toggle(1550);
             });
 
 
@@ -619,6 +665,22 @@
                 $('#resultatSelect').text(resultatSelect);
             });
 
+            $('#E22').click(function () {
+                $('#nom').val('Moltes');
+            });
+
+            $('#E23').click(function () {
+                $('#pass').val('abcd');
+            });
+
+            $('#E24').click(function () {
+                $(':radio').val(['H']);
+            });
+
+            $('#E25').click(function () {
+                $('#fonction').val('retraite');
+            });
+
             $('#reset1').click(function () {
                 $('.i1').css('width', tailleImgDefaut);
                 $('.p1').text(texteDefaut);
@@ -649,6 +711,11 @@
 
             $('#reset5').click(function () {
                 $('#info5').text('');
+            });
+
+            $("#reset6").click(function() {
+                $("#form")[0].reset();
+                $('[id*="resultat"]').text('');
             });
         });
     </script>
